@@ -24,8 +24,8 @@ xcodebuild -project MenuMate.xcodeproj -scheme MenuMate -configuration Release \
   MARKETING_VERSION="$NUMERIC_VERSION" CURRENT_PROJECT_VERSION="$BUILD_NUMBER" build
 APP="$ROOT/build/Build/Products/Release/MenuMate.app"
 EXT="$APP/Contents/PlugIns/FinderExtension.appex"
-/usr/bin/lipo -verify_arch arm64 x86_64 "$APP/Contents/MacOS/MenuMate"
-/usr/bin/lipo -verify_arch arm64 x86_64 "$EXT/Contents/MacOS/FinderExtension"
+/usr/bin/lipo "$APP/Contents/MacOS/MenuMate" -verify_arch arm64 x86_64
+/usr/bin/lipo "$EXT/Contents/MacOS/FinderExtension" -verify_arch arm64 x86_64
 /usr/bin/codesign --verify --deep --strict --verbose=2 "$APP"
 /usr/bin/codesign -dvv "$APP" 2>&1 | /usr/bin/grep -q 'Signature=adhoc'
 /usr/bin/codesign -dvv "$EXT" 2>&1 | /usr/bin/grep -q 'Signature=adhoc'
