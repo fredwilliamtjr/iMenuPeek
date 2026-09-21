@@ -8,6 +8,12 @@ MenuMate 是开源的 macOS 菜单栏应用，用于创建文件动作、管理�
 
 本文描述当前源码的能力，已发布安装包不一定包含这里的全部功能。
 
+## 下载测试版
+
+[下载 v0.3.0-beta.1](https://github.com/Hibrielle/menumate/releases/tag/v0.3.0-beta.1) · [安装说明](docs/INSTALL-TEST.md)
+
+macOS 13+，Universal 包包含 Apple Silicon 和 Intel。测试包使用临时签名，未经 Apple 公证，首次打开可能需要手动允许；自动更新暂未启用。
+
 ## 产品截图
 
 以下图片直接截取自运行中的 macOS App，动作名称来自本地配置。

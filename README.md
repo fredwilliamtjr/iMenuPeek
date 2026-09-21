@@ -11,6 +11,13 @@ Sync extension supplies the context menu. macOS 13+ · English / Simplified Chin
 This README describes the current source tree. Published releases may not include every
 feature described here.
 
+## Download the test build
+
+[Download v0.3.0-beta.1](https://github.com/Hibrielle/menumate/releases/tag/v0.3.0-beta.1) · [Installation instructions](docs/INSTALL-TEST.md#english)
+
+macOS 13+, Universal (Apple Silicon and Intel). This test build is ad-hoc signed and **not Apple-notarized**;
+first launch may require manual approval. Automatic updates are disabled.
+
 ## Screenshots
 
 Captured from the running macOS app. Action names reflect the local configuration.

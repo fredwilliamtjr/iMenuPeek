@@ -1,7 +1,23 @@
 # Releasing MenuMate
 
-MenuMate ships as a **Developer ID-signed, notarized `.dmg`** with **Sparkle** auto-updates.
-This document covers the one-time setup and the per-release flow.
+MenuMate supports a public test-build path without Apple distribution credentials, and a
+Developer ID-signed/notarized path for formal releases.
+
+## Public test builds
+
+Commit the intended source, then run `zsh scripts/release-test.sh 0.3.0-beta.1`.
+The script builds a Universal Release app using ad-hoc signatures, verifies both architectures
+and code signatures, and creates a DMG plus installation instructions, build metadata and SHA-256 hashes
+under `build/test-release/<version>/`. It does not publish, notarize, or enable automatic updates.
+See [test installation instructions](INSTALL-TEST.md).
+
+After inspecting the artifact, tag that exact source commit and create a GitHub **Pre-release**.
+Upload the DMG, `SHA256SUMS.txt`, `BUILD-INFO.txt` and `INSTALL.md`. Do not label an ad-hoc build notarized.
+The signed-release workflow skips prerelease tags containing `-`.
+
+## Formal releases
+
+The remaining sections describe the Developer ID, notarization and Sparkle setup.
 
 > Distribution requires a paid **Apple Developer Program** membership and a **Developer ID
 > Application** certificate. An "Apple Development" cert (free) is enough to build and run
@@ -87,7 +103,7 @@ notarizes + staples it, and prints the Sparkle signature. Artifact: `build/relea
 
 ### Via CI (recommended)
 
-Bump `CFBundleShortVersionString` / `CFBundleVersion` in `App/Info.plist`, commit, then tag:
+Commit the intended source, then tag the version. The script injects the marketing version from the tag and the build number from Git history:
 
 ```bash
 git tag v1.0.0 && git push origin v1.0.0
@@ -103,7 +119,7 @@ git tag v1.0.0 && git push origin v1.0.0
 
 - [ ] `SUPublicEDKey` in `project.yml` is your real Sparkle public key (not the placeholder).
 - [ ] Re-enable auto-update: set `SUEnableAutomaticChecks` to `true` (or remove it) in `project.yml` — it's `false` pre-release so dev builds don't pop a "can't check for updates" error on launch.
-- [ ] Version bumped in `App/Info.plist`.
+- [ ] Release tag matches the intended version and commit.
 - [ ] All nine GitHub secrets set (for CI).
 - [ ] `xcrun stapler validate build/release/MenuMate-<v>.dmg` passes.
 - [ ] Gatekeeper check on a clean machine: `spctl -a -vvv -t install MenuMate-<v>.dmg`.

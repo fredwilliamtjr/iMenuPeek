@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   release:
+    # Beta tags are distributed separately without Developer ID/Sparkle secrets.
+    if: ${{ !contains(github.ref_name, '-') }}
     runs-on: macos-15   # Xcode 16 default (xcodegen emits project format 77)
     steps:
       - uses: actions/checkout@v4
