@@ -27,8 +27,10 @@ EXT="$APP/Contents/PlugIns/FinderExtension.appex"
 /usr/bin/lipo "$APP/Contents/MacOS/MenuMate" -verify_arch arm64 x86_64
 /usr/bin/lipo "$EXT/Contents/MacOS/FinderExtension" -verify_arch arm64 x86_64
 /usr/bin/codesign --verify --deep --strict --verbose=2 "$APP"
-/usr/bin/codesign -dvv "$APP" 2>&1 | /usr/bin/grep -q 'Signature=adhoc'
-/usr/bin/codesign -dvv "$EXT" 2>&1 | /usr/bin/grep -q 'Signature=adhoc'
+APP_SIGNATURE="$(/usr/bin/codesign -dvv "$APP" 2>&1)"
+[[ "$APP_SIGNATURE" == *'Signature=adhoc'* ]]
+EXT_SIGNATURE="$(/usr/bin/codesign -dvv "$EXT" 2>&1)"
+[[ "$EXT_SIGNATURE" == *'Signature=adhoc'* ]]
 [[ "$(/usr/libexec/PlistBuddy -c 'Print :SUEnableAutomaticChecks' "$APP/Contents/Info.plist")" == false ]]
 
 STAGE="$(mktemp -d "$OUTPUT/stage.XXXXXXXX")"
