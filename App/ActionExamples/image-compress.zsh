@@ -12,6 +12,9 @@ resultFolder="Compressed Images"
 if [[ "${MENUMATE_LOCALE:-en}" == zh* ]]; then
   resultSuffix="压缩"
   resultFolder="压缩图片"
+elif [[ "${MENUMATE_LOCALE:-en}" == pt* ]]; then
+  resultSuffix="comprimida"
+  resultFolder="Imagens comprimidas"
 fi
 for source in "$@"; do
   [[ -f "$source" ]] || { print -u2 "Missing input: $source"; exit 2; }

@@ -10,10 +10,12 @@ import MenuMateCore
 struct OnboardingView: View {
     @State private var step = 0
     @State private var extensionEnabled = FIFinderSyncController.isExtensionEnabled
+    @State private var notificationState: Permissions.State?
+    @State private var automationState: Permissions.State?
+    @State private var refreshing = false
     @State private var loginItemEnabled = SMAppService.mainApp.status == .enabled
-    @State private var accessibilityTrusted = Permissions.accessibilityTrusted
-    @State private var diagnosis = OnboardingView.runDiagnosis()
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var diagnosis = ""   // calculado ao entrar na tela ④ (e a cada 2 s nela)
+    private let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
     private let stepCount = 4
 
     var body: some View {
@@ -68,11 +70,34 @@ struct OnboardingView: View {
         .padding(.top, 8)
         .padding(.bottom, 22)
         .frame(width: 520, height: 480)
-        .onReceive(timer) { _ in
-            extensionEnabled = FIFinderSyncController.isExtensionEnabled
-            accessibilityTrusted = Permissions.accessibilityTrusted
-        }
+        .onAppear { refreshStatus() }
+        .onReceive(timer) { _ in refreshStatus() }
+        .onChange(of: step) { _ in refreshStatus() }
         .onDisappear { timer.upstream.connect().cancel() }
+    }
+
+    /// Atualiza os indicadores. A API da Apple para a extensão falha em builds ad-hoc
+    /// (ver AppDelegate.extensionEnabled) → mesma verificação com pluginkit, fora da main.
+    private func refreshStatus() {
+        Permissions.notificationState { notificationState = $0 }
+        guard !refreshing else { return }
+        refreshing = true
+        let onDiagnosis = step == stepCount - 1
+        Task.detached(priority: .utility) {
+            let extensionOn = AppDelegate.extensionEnabled(log: false)
+            let automation = Permissions.finderAutomationState()
+            let report = onDiagnosis ? OnboardingView.runDiagnosis(extensionEnabled: extensionOn) : nil
+            await MainActor.run {
+                extensionEnabled = extensionOn
+                automationState = automation
+                if let report { diagnosis = report }
+                refreshing = false
+            }
+        }
+    }
+
+    private var allPermissionsGranted: Bool {
+        notificationState == .granted && automationState == .granted
     }
 
     // MARK: - 步进文案
@@ -176,30 +201,29 @@ struct OnboardingView: View {
     private var step3Permissions: some View {
         VStack(spacing: 8) {
             permissionRow(icon: "bell.badge", hue: .orange, title: String(localized: "onboarding.step3.notifications.title"),
-                          desc: String(localized: "onboarding.step3.notifications.desc"))
+                          desc: String(localized: "onboarding.step3.notifications.desc"),
+                          state: notificationState, openSettings: Permissions.openNotificationSettings)
             permissionRow(icon: "gearshape.2", hue: .blue, title: String(localized: "onboarding.step3.automation.title"),
-                          desc: String(localized: "onboarding.step3.automation.desc"))
-            permissionRow(icon: "accessibility", hue: .green, title: String(localized: "onboarding.step3.accessibility.title"),
-                          desc: String(localized: "onboarding.step3.accessibility.desc"),
-                          granted: accessibilityTrusted)
+                          desc: String(localized: "onboarding.step3.automation.desc"),
+                          state: automationState, openSettings: Permissions.openAutomationSettings)
         }
         VStack(spacing: 8) {
-            MMButton(String(localized: "onboarding.step3.grantAll"), systemImage: "checkmark.shield", kind: .primary) {
+            MMButton(String(localized: allPermissionsGranted ? "onboarding.step3.allGranted" : "onboarding.step3.grantAll"),
+                     systemImage: "checkmark.shield", kind: .primary) {
                 Permissions.primeAll()
+                // Os avisos do sistema são assíncronos; os indicadores também se atualizam a cada 2 s.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { refreshStatus() }
             }
-            if !accessibilityTrusted {
-                MMButton(String(localized: "onboarding.step3.openAccessibility"), kind: .plain, size: .sm) {
-                    Permissions.openAccessibilitySettings()
-                }
-            }
+            .disabled(allPermissionsGranted)
         }
         .padding(.top, 4)
     }
 
-    // 单条权限说明行(右侧给出辅助功能的实时状态)。
+    // 单条权限说明行(右侧给出该权限的实时状态;negada → botão para os Ajustes do Sistema)。
     @ViewBuilder
     private func permissionRow(icon: String, hue: AppIconHue, title: String,
-                               desc: String, granted: Bool? = nil) -> some View {
+                               desc: String, state: Permissions.State?,
+                               openSettings: @escaping () -> Void) -> some View {
         HStack(spacing: 12) {
             AppIcon(icon, size: 30, hue: hue)
             VStack(alignment: .leading, spacing: 1) {
@@ -207,10 +231,8 @@ struct OnboardingView: View {
                 Text(desc).font(.system(size: 11.5)).foregroundStyle(MMColor.label2)
             }
             Spacer(minLength: 0)
-            if let granted {
-                Image(systemName: granted ? "checkmark.circle.fill" : "circle.dashed")
-                    .font(.system(size: 16))
-                    .foregroundStyle(granted ? MMColor.green : MMColor.label3)
+            if let state {
+                permissionStatus(state, openSettings: openSettings)
             }
         }
         .padding(.horizontal, 16)
@@ -220,6 +242,33 @@ struct OnboardingView: View {
         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
             .stroke(MMColor.hairline, lineWidth: 0.5))
+    }
+
+    @ViewBuilder
+    private func permissionStatus(_ state: Permissions.State, openSettings: @escaping () -> Void) -> some View {
+        switch state {
+        case .granted:
+            HStack(spacing: 5) {
+                Image(systemName: "checkmark.circle.fill").font(.system(size: 15))
+                Text(String(localized: "onboarding.permission.granted")).font(.system(size: 11.5, weight: .medium))
+            }
+            .foregroundStyle(MMColor.green)
+        case .denied:
+            VStack(alignment: .trailing, spacing: 3) {
+                HStack(spacing: 5) {
+                    Image(systemName: "xmark.octagon.fill").font(.system(size: 15))
+                    Text(String(localized: "onboarding.permission.denied")).font(.system(size: 11.5, weight: .medium))
+                }
+                .foregroundStyle(MMColor.red)
+                MMButton(String(localized: "onboarding.permission.openSettings"), kind: .plain, size: .sm, action: openSettings)
+            }
+        case .notDetermined:
+            HStack(spacing: 5) {
+                Image(systemName: "circle.dashed").font(.system(size: 15))
+                Text(String(localized: "onboarding.permission.pending")).font(.system(size: 11.5))
+            }
+            .foregroundStyle(MMColor.label3)
+        }
     }
 
     // ④ 环境自检。
@@ -248,6 +297,14 @@ struct OnboardingView: View {
             Spacer()
         }
         .padding(.top, 2)
+        // O Finder só carrega a extensão (ou uma versão nova dela) depois de reiniciar.
+        Banner(String(localized: "onboarding.step4.restartFinderNote"), tone: .accent, systemImage: "info.circle.fill") {
+            MMButton(String(localized: "menubar.restartFinder"), kind: .tinted, size: .sm) {
+                DispatchQueue.global(qos: .userInitiated).async {
+                    ShellRunner.run("/usr/bin/killall", ["Finder"], timeout: 10)
+                }
+            }
+        }
     }
 
     private var diagnosisLines: [String] {
@@ -308,17 +365,25 @@ struct OnboardingView: View {
 
     // MARK: - 自检(保留现有逻辑)
 
-    static func runDiagnosis() -> String {
+    /// Fora da main (roda pluginkit). `extensionEnabled` vem de AppDelegate.extensionEnabled —
+    /// a API isExtensionEnabled sozinha diz "não ativada" em builds ad-hoc mesmo com a extensão ativa.
+    nonisolated static func runDiagnosis(extensionEnabled: Bool) -> String {
         var lines: [String] = []
-        if FIFinderSyncController.isExtensionEnabled {
+        if extensionEnabled {
             lines.append(String(localized: "onboarding.diag.extEnabled"))
         } else {
             lines.append(String(localized: "onboarding.diag.extNotEnabled"))
         }
         let r = ShellRunner.run("/usr/bin/pluginkit", ["-m", "-p", "com.apple.FinderSync", "-v"], timeout: 10)
-        let own = PluginkitParser.parse(r.stdout).first { $0.bundleID == ExtensionManager.ownBundleID }
+        let own = PluginkitParser.parse(r.stdout).first { $0.bundleID == Brand.extensionBundleID }
         if let own {
-            lines.append(String(format: String(localized: "onboarding.diag.extRegistered"), "\(own.election)"))
+            let election: String
+            switch own.election {
+            case .use: election = String(localized: "onboarding.diag.electionUse")
+            case .ignore: election = String(localized: "onboarding.diag.electionIgnore")
+            case .unknown: election = String(localized: "onboarding.diag.electionUnknown")
+            }
+            lines.append(String(format: String(localized: "onboarding.diag.extRegistered"), election))
         } else {
             lines.append(String(localized: "onboarding.diag.extNotRegistered"))
         }

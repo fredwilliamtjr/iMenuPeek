@@ -1,12 +1,12 @@
 import Foundation
 
 public enum IPC {
-    public static let actionNotification = "com.menumate.action"
-    public static let heartbeatNotification = "com.menumate.heartbeat"
+    public static let actionNotification = Brand.appBundleID + ".action"
+    public static let heartbeatNotification = Brand.appBundleID + ".heartbeat"
     /// 主 App → 扩展：推送 ExtensionSnapshot 的分块（ChunkedTransport.Chunk JSON）
-    public static let snapshotNotification = "com.menumate.snapshot"
+    public static let snapshotNotification = Brand.appBundleID + ".snapshot"
     /// 扩展 → 主 App：请求立即推送一份快照（扩展启动或尚无快照时）
-    public static let snapshotRequestNotification = "com.menumate.snapshot-request"
+    public static let snapshotRequestNotification = Brand.appBundleID + ".snapshot-request"
     /// 单次动作的选中路径数上限；扩展画菜单与主 App 派发闸门共用此常量。
     public static let maxPaths = 1000
 }

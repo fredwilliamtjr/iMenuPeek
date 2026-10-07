@@ -51,15 +51,13 @@ final class TestWorkspaceTests: XCTestCase {
         }
     }
     func testEachRunHasIndependentDataAndTemplates() throws {
-        let first = try TestWorkspace.create(action: action(MatchRule(targets: .container), preset: "paste"),
+        let first = try TestWorkspace.create(action: action(MatchRule(targets: .container)),
                                              resource: .folder, count: 1, baseDirectory: root)
         let second = try TestWorkspace.create(action: action(MatchRule(targets: .container)),
                                               resource: .folder, count: 1, baseDirectory: root)
         XCTAssertNotEqual(first.directory, second.directory)
         XCTAssertFalse(TemplateStore.list(in: first.templatesDirectory).isEmpty)
-        let cutBuffer = try String(contentsOf: first.dataDirectory.appendingPathComponent("cutbuffer"))
-        XCTAssertTrue(cutBuffer.hasPrefix(first.directory.path + "/"))
-        XCTAssertFalse(FileManager.default.fileExists(atPath: second.dataDirectory.appendingPathComponent("cutbuffer").path))
+        XCTAssertNotEqual(first.dataDirectory, second.dataDirectory)
         let result = ShellRunner.runScript(
             ScriptSpec(inlineSource: #"printf '%s' "$MENUMATE_TEST_ROOT" > "$MENUMATE_DATA/result.txt""#),
             paths: first.inputs.map(\.path), variant: nil, scriptBase: root,

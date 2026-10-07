@@ -6,7 +6,7 @@ import Foundation
 public enum Declutter {
     public static func isThirdParty(bundleID: String?, bundlePath: String?) -> Bool {
         if let b = bundleID {
-            if b.hasPrefix("com.apple.") || b.hasPrefix("com.menumate.") { return false }
+            if b.hasPrefix("com.apple.") || Brand.owns(bundleID: b) { return false }
             return true
         }
         if let p = bundlePath { return !p.hasPrefix("/System/") }

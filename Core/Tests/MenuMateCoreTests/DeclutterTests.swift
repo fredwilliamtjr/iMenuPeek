@@ -5,7 +5,7 @@ final class DeclutterTests: XCTestCase {
     func testAppleAndMenuMateAreNotThirdParty() {
         XCTAssertFalse(Declutter.isThirdParty(bundleID: "com.apple.Preview",
                                               bundlePath: "/System/Applications/Preview.app"))
-        XCTAssertFalse(Declutter.isThirdParty(bundleID: "com.menumate.app.FinderExtension", bundlePath: nil))
+        XCTAssertFalse(Declutter.isThirdParty(bundleID: "com.smartfull.imenupeek.FinderExtension", bundlePath: nil))
         XCTAssertFalse(Declutter.isThirdParty(bundleID: nil,
                                               bundlePath: "/System/Library/Services/X.service"))
     }

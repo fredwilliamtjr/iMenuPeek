@@ -1,125 +1,80 @@
-# Releasing MenuMate
+# Publicando o iMenuPeek
 
-MenuMate supports a public test-build path without Apple distribution credentials, and a
-Developer ID-signed/notarized path for formal releases.
+O iMenuPeek **não tem atualização automática**: o Sparkle do MenuMate foi removido. Versão nova = release no GitHub, baixada e instalada à mão.
 
-## Public test builds
+Há três caminhos: **versão final ad-hoc** (o padrão da família Peek), build de teste e release formal (Developer ID + notarização).
 
-Commit the intended source, then run `zsh scripts/release-test.sh 0.3.0-beta.1`.
-The script builds a Universal Release app using ad-hoc signatures, verifies both architectures
-and code signatures, and creates a DMG plus installation instructions, build metadata and SHA-256 hashes
-under `build/test-release/<version>/`. It does not publish, notarize, or enable automatic updates.
-See [test installation instructions](INSTALL-TEST.md).
+## Versão final (ad-hoc) — padrão
 
-After inspecting the artifact, tag that exact source commit and create a GitHub **Pre-release**.
-Upload the DMG, `SHA256SUMS.txt`, `BUILD-INFO.txt` and `INSTALL.md`. Do not label an ad-hoc build notarized.
-The signed-release workflow skips prerelease tags containing `-`.
-
-## Formal releases
-
-The remaining sections describe the Developer ID, notarization and Sparkle setup.
-
-> Distribution requires a paid **Apple Developer Program** membership and a **Developer ID
-> Application** certificate. An "Apple Development" cert (free) is enough to build and run
-> locally, but **not** to notarize for distribution.
-
----
-
-## One-time setup
-
-### 1. Developer ID certificate
-
-In Xcode → Settings → Accounts, or the Apple Developer portal, create a **Developer ID
-Application** certificate and install it in your login keychain. Find its identity string:
+Com tudo commitado:
 
 ```bash
-security find-identity -v -p codesigning | grep "Developer ID Application"
-# → "Developer ID Application: Your Name (TEAMID)"
+zsh scripts/build_release.sh 0.1.0
 ```
 
-### 2. Notarization credentials (App Store Connect API key)
+Gera em `dist/` o `iMenuPeek.app`, o `iMenuPeek.dmg` (arrastar para Aplicativos), o `iMenuPeek.zip` e o `SHA256SUMS.txt`. Universal (arm64 + x86_64), assinatura ad-hoc, sem notarização; o script confere arquiteturas, assinatura, versão e ausência de Sparkle. Depois publique a release no GitHub com a tag `v0.1.0` anexando o DMG e o zip.
 
-App Store Connect → Users and Access → Integrations → create an **API Key** (role: Developer).
-Download the `AuthKey_XXXXXX.p8`. Note the **Key ID** and **Issuer ID**.
+## Build de teste (ad-hoc, sem notarização)
 
-For local runs you can instead store a notarytool profile once:
+Com o código desejado commitado, rode:
 
 ```bash
-xcrun notarytool store-credentials menumate-notary \
-  --key AuthKey_XXXXXX.p8 --key-id <KEY_ID> --issuer <ISSUER_ID>
-# then run releases with NOTARY_PROFILE=menumate-notary
+zsh scripts/release-test.sh 0.1.0-beta.1
 ```
 
-### 3. Sparkle EdDSA keys
+O script gera um app Universal em Release com assinatura ad-hoc, confere as duas arquiteturas e as assinaturas, e cria em `build/test-release/<versão>/` o DMG, as instruções de instalação, os metadados de build e os hashes SHA-256. Ele não publica nem notariza. Veja as [instruções de instalação de teste](INSTALL-TEST.md).
 
-Generate the signing key pair once (the private key is stored in your login keychain):
+Depois de conferir o artefato, crie a tag nesse mesmo commit e uma **Pre-release** no GitHub com o DMG, `SHA256SUMS.txt`, `BUILD-INFO.txt` e `INSTALL.md`. Não descreva build ad-hoc como notarizado. O workflow de release assinada ignora tags com `-` (pré-release).
 
-```bash
-build/SourcePackages/artifacts/sparkle/Sparkle/bin/generate_keys
-# prints the PUBLIC key — paste it into project.yml → SUPublicEDKey (replace the placeholder)
-```
+## Release formal (Developer ID)
 
-Export the **private** key for CI (keep it secret):
+Exige assinatura paga do **Apple Developer Program** e um certificado **Developer ID Application**. O certificado "Apple Development" (gratuito) serve para compilar e rodar localmente, mas **não** para notarizar.
 
-```bash
-build/SourcePackages/artifacts/sparkle/Sparkle/bin/generate_keys -x sparkle_private_key.pem
-```
+### Preparação (uma vez)
 
-After setting `SUPublicEDKey`, re-run `make gen`.
+1. **Certificado Developer ID:** crie no Xcode (Ajustes → Contas) ou no portal da Apple e instale no Keychain. Para achar a identidade:
 
-### 4. GitHub Actions secrets
+   ```bash
+   security find-identity -v -p codesigning | grep "Developer ID Application"
+   ```
 
-For the tag-triggered [`release.yml`](../.github/workflows/release.yml) workflow, add these
-repository secrets (Settings → Secrets and variables → Actions):
+2. **Credenciais de notarização:** no App Store Connect (Usuários e Acesso → Integrações), crie uma **API Key** (função Developer) e baixe o `AuthKey_XXXXXX.p8`. Para uso local, guarde um perfil do notarytool:
 
-| Secret | What |
-|--------|------|
-| `DEVELOPER_ID_CERT_P12_BASE64` | your Developer ID cert+key exported as `.p12`, then `base64` |
-| `DEVELOPER_ID_CERT_PASSWORD` | the `.p12` export password |
-| `KEYCHAIN_PASSWORD` | any string (temp CI keychain password) |
-| `DEVELOPER_ID_APP` | `Developer ID Application: Your Name (TEAMID)` |
-| `TEAM_ID` | your Apple Team ID |
-| `NOTARY_KEY_ID` / `NOTARY_ISSUER` | from the API key above |
-| `NOTARY_KEY_P8_BASE64` | the `AuthKey_XXXXXX.p8`, `base64`-encoded |
-| `SPARKLE_ED_PRIVATE_KEY` | the Sparkle private key string |
+   ```bash
+   xcrun notarytool store-credentials imenupeek-notary \
+     --key AuthKey_XXXXXX.p8 --key-id <KEY_ID> --issuer <ISSUER_ID>
+   ```
 
-Export the cert as base64: `base64 -i DeveloperID.p12 | pbcopy`.
+3. **Segredos do GitHub Actions** (para o [`release.yml`](../.github/workflows/release.yml)), em Settings → Secrets and variables → Actions:
 
----
+   | Segredo | Conteúdo |
+   |---|---|
+   | `DEVELOPER_ID_CERT_P12_BASE64` | certificado + chave exportados em `.p12`, em `base64` |
+   | `DEVELOPER_ID_CERT_PASSWORD` | senha do `.p12` |
+   | `KEYCHAIN_PASSWORD` | qualquer texto (keychain temporário do CI) |
+   | `DEVELOPER_ID_APP` | `Developer ID Application: Seu Nome (TEAMID)` |
+   | `TEAM_ID` | Team ID da Apple |
+   | `NOTARY_KEY_ID` / `NOTARY_ISSUER` | da API Key acima |
+   | `NOTARY_KEY_P8_BASE64` | o `AuthKey_XXXXXX.p8` em `base64` |
 
-## Cutting a release
+### Gerando a release
 
-### Locally
+Localmente:
 
 ```bash
-export DEVELOPER_ID_APP="Developer ID Application: Your Name (TEAMID)"
+export DEVELOPER_ID_APP="Developer ID Application: Seu Nome (TEAMID)"
 export TEAM_ID=TEAMID
-export NOTARY_PROFILE=menumate-notary        # from step 2
+export NOTARY_PROFILE=imenupeek-notary
 make release VERSION=1.0.0
 ```
 
-This archives (Release, hardened runtime), exports a Developer ID app, builds a signed dmg,
-notarizes + staples it, and prints the Sparkle signature. Artifact: `build/release/MenuMate-1.0.0.dmg`.
+Gera o archive (Release, hardened runtime), exporta o app Developer ID, monta o DMG assinado, notariza e grampeia. Artefato: `build/release/iMenuPeek-1.0.0.dmg`.
 
-### Via CI (recommended)
+Pelo CI: crie e envie a tag (`git tag v1.0.0 && git push origin v1.0.0`). O `release.yml` compila, assina, notariza e cria a release no GitHub com o DMG.
 
-Commit the intended source, then tag the version. The script injects the marketing version from the tag and the build number from Git history:
+### Checklist
 
-```bash
-git tag v1.0.0 && git push origin v1.0.0
-```
-
-`release.yml` then builds, signs, notarizes, creates a GitHub Release with the dmg, regenerates
-`appcast.xml`, and pushes it to `main`. Sparkle clients poll `SUFeedURL`
-(`…/main/appcast.xml`) and offer the update.
-
----
-
-## Checklist
-
-- [ ] `SUPublicEDKey` in `project.yml` is your real Sparkle public key (not the placeholder).
-- [ ] Re-enable auto-update: set `SUEnableAutomaticChecks` to `true` (or remove it) in `project.yml` — it's `false` pre-release so dev builds don't pop a "can't check for updates" error on launch.
-- [ ] Release tag matches the intended version and commit.
-- [ ] All nine GitHub secrets set (for CI).
-- [ ] `xcrun stapler validate build/release/MenuMate-<v>.dmg` passes.
-- [ ] Gatekeeper check on a clean machine: `spctl -a -vvv -t install MenuMate-<v>.dmg`.
+- [ ] A tag corresponde à versão e ao commit pretendidos.
+- [ ] Os sete segredos do GitHub estão configurados (para o CI).
+- [ ] `xcrun stapler validate build/release/iMenuPeek-<v>.dmg` passa.
+- [ ] Gatekeeper numa máquina limpa: `spctl -a -vvv -t install iMenuPeek-<v>.dmg`.

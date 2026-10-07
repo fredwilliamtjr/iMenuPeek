@@ -1,22 +1,22 @@
 name: Release
 
-# Tag a version to build, sign, notarize, package a dmg, publish a GitHub Release,
-# and update the Sparkle appcast. Requires the repository secrets listed in docs/RELEASING.md.
+# Tag a version to build, sign, notarize, package a dmg and publish a GitHub Release.
+# Requires the repository secrets listed in docs/RELEASING.md.
 on:
   push:
     tags: ["v*"]
 
 permissions:
-  contents: write   # create releases + push appcast.xml
+  contents: write   # create releases
 
-# Serialize releases so two tags can't race the appcast commit/push to main.
+# Serialize releases.
 concurrency:
   group: release
   cancel-in-progress: false
 
 jobs:
   release:
-    # Beta tags are distributed separately without Developer ID/Sparkle secrets.
+    # Beta tags are distributed separately without Developer ID secrets.
     if: ${{ !contains(github.ref_name, '-') }}
     runs-on: macos-15   # Xcode 16 default (xcodegen emits project format 77)
     steps:
@@ -40,14 +40,13 @@ jobs:
       - name: Install xcodegen
         run: brew install xcodegen
 
-      - name: Build · sign · notarize · dmg · sparkle-sign
+      - name: Build · sign · notarize · dmg
         env:
           DEVELOPER_ID_APP: ${{ secrets.DEVELOPER_ID_APP }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
           NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
           NOTARY_ISSUER: ${{ secrets.NOTARY_ISSUER }}
           NOTARY_KEY_P8_BASE64: ${{ secrets.NOTARY_KEY_P8_BASE64 }}
-          SPARKLE_ED_PRIVATE_KEY: ${{ secrets.SPARKLE_ED_PRIVATE_KEY }}
         run: |
           cp Local.xcconfig.template Local.xcconfig
           echo "$NOTARY_KEY_P8_BASE64" | base64 -d > "$RUNNER_TEMP/AuthKey.p8"
@@ -55,30 +54,10 @@ jobs:
           VERSION="${GITHUB_REF_NAME#v}"
           ./scripts/release.sh "$VERSION"
 
-      - name: Generate Sparkle appcast
-        env:
-          SPARKLE_ED_PRIVATE_KEY: ${{ secrets.SPARKLE_ED_PRIVATE_KEY }}
-        run: |
-          BIN=build/SourcePackages/artifacts/sparkle/Sparkle/bin
-          mkdir -p build/release/feed
-          cp build/release/MenuMate-*.dmg build/release/feed/
-          printf '%s' "$SPARKLE_ED_PRIVATE_KEY" > "$RUNNER_TEMP/sparkle_key"
-          "$BIN/generate_appcast" build/release/feed \
-            --ed-key-file "$RUNNER_TEMP/sparkle_key" \
-            --download-url-prefix "https://github.com/${GITHUB_REPOSITORY}/releases/download/${GITHUB_REF_NAME}/"
-          cp build/release/feed/appcast.xml appcast.xml
-
       - name: Publish GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" build/release/MenuMate-*.dmg \
+          gh release create "$GITHUB_REF_NAME" build/release/iMenuPeek-*.dmg \
             --title "$GITHUB_REF_NAME" --generate-notes
 
-      - name: Commit updated appcast
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add appcast.xml
-          git commit -m "chore: update appcast for ${GITHUB_REF_NAME}" || echo "no appcast change"
-          git push origin HEAD:main

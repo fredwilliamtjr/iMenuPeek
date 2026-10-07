@@ -132,7 +132,7 @@ final class ActionWindowController: NSWindowController, NSWindowDelegate, WKScri
                 guard let list else {
                     self.status.stringValue = String(localized: "dialog.loadFailed")
                     if let error {
-                        NSLog("MenuMate local page rule compilation failed: %@", String(describing: error as NSError))
+                        NSLog("iMenuPeek local page rule compilation failed: %@", String(describing: error as NSError))
                     }
                     return
                 }

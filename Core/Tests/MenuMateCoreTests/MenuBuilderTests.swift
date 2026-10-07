@@ -57,7 +57,7 @@ final class MenuBuilderTests: XCTestCase {
         let newFileID = seed.actions.first { $0.presetKey == "new-file" }!.id
         let specs = MenuBuilder.build(input(config: seed, context: .container(dir),
                                             listings: [newFileID: ["文本.txt", "Markdown.md"]]))
-        let newFile = specs.first { $0.title == title(seed, "new-file") }
+        let newFile = flat(specs).first { $0.title == title(seed, "new-file") }
         XCTAssertEqual(newFile?.children.map(\.title), ["文本.txt", "Markdown.md"])
     }
 
@@ -65,19 +65,36 @@ final class MenuBuilderTests: XCTestCase {
         let seed = MenuConfig.defaultSeed()
         // 不注入 listings → directoryListing 类动作（新建文件）应整体隐藏
         let specs = MenuBuilder.build(input(config: seed, context: .container(dir)))
-        XCTAssertFalse(specs.contains { $0.title == title(seed, "new-file") })
-        // 但「粘贴到此处」是普通容器动作，应在
-        XCTAssertTrue(specs.contains { $0.title == title(seed, "paste") })
+        XCTAssertFalse(flat(specs).contains { $0.title == title(seed, "new-file") })
+        // 但「上一层」是普通容器动作，应在
+        XCTAssertTrue(flat(specs).contains { $0.title == title(seed, "open-parent") })
     }
 
-    func testSubmenuPlacementGroupsUnderMenuMate() {
-        var seed = MenuConfig.defaultSeed()
+    func testPresetsGroupUnderBrandSubmenuByDefault() {
+        let seed = MenuConfig.defaultSeed()
+        XCTAssertTrue(seed.actions.allSatisfy { $0.placement == .submenu })
         let copyTitle = title(seed, "copy-path")
-        seed.actions[0].placement = .submenu   // 复制路径挪进子菜单
         let specs = MenuBuilder.build(input(config: seed, context: .items([file])))
-        let group = specs.first { $0.title == "MenuMate" }
+        let group = specs.first { $0.title == Brand.name }
+        XCTAssertEqual(group?.symbol, Brand.menuSymbol)
+        XCTAssertNil(group?.request)   // 父节点不可点击
         XCTAssertEqual(group?.children.first?.title, copyTitle)
         XCTAssertFalse(specs.contains { $0.title == copyTitle })
+    }
+
+    func testTopLevelPlacementStaysOutOfSubmenu() {
+        var seed = MenuConfig.defaultSeed()
+        let copyTitle = title(seed, "copy-path")
+        seed.actions[0].placement = .topLevel   // 复制路径挪到顶层
+        let specs = MenuBuilder.build(input(config: seed, context: .items([file])))
+        XCTAssertTrue(specs.contains { $0.title == copyTitle })
+        let group = specs.first { $0.title == Brand.name }
+        XCTAssertFalse(group?.children.contains { $0.title == copyTitle } ?? false)
+    }
+
+    /// Itens do topo + filhos do submenu do app (os presets ficam no submenu).
+    private func flat(_ specs: [MenuItemSpec]) -> [MenuItemSpec] {
+        specs.flatMap { $0.request == nil && $0.title == Brand.name ? $0.children : [$0] }
     }
 
     func testPrepareListingsResolvesRelativeAgainstBase() throws {

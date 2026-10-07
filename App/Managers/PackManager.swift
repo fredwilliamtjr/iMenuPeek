@@ -131,8 +131,8 @@ final class PackManager: ObservableObject {
         let tempDir = FileManager.default.temporaryDirectory
             .appendingPathComponent("menumate-pack-\(UUID().uuidString)", isDirectory: true)
 
-        // git clone --depth 1 — pure fetch, no script execution.
-        let clone = await Self.git(["clone", "--depth", "1", repoURL, tempDir.path], cwd: nil)
+        // git clone --depth 1 — pure fetch, no script execution. "--" impede que a URL digitada vire opção do git.
+        let clone = await Self.git(["clone", "--depth", "1", "--", repoURL, tempDir.path], cwd: nil)
         guard clone.exitCode == 0 else {
             try? FileManager.default.removeItem(at: tempDir)
             throw PackError.gitFailed(clone.stderr.isEmpty ? clone.stdout : clone.stderr)
@@ -222,7 +222,7 @@ final class PackManager: ObservableObject {
         }
         guard let rec = records.first(where: { $0.key == key }) else { return nil }
         // ls-remote avoids touching the working tree; compares the default-branch HEAD.
-        let result = await Self.git(["ls-remote", rec.repoURL, "HEAD"], cwd: nil)
+        let result = await Self.git(["ls-remote", "--", rec.repoURL, "HEAD"], cwd: nil)
         guard result.exitCode == 0 else { return nil }
         let remoteFull = result.stdout.split(whereSeparator: { $0 == "\t" || $0 == " " }).first.map(String.init) ?? ""
         guard !remoteFull.isEmpty else { return nil }
@@ -239,7 +239,7 @@ final class PackManager: ObservableObject {
         }
         let tempDir = FileManager.default.temporaryDirectory
             .appendingPathComponent("menumate-pack-update-\(UUID().uuidString)", isDirectory: true)
-        let clone = await Self.git(["clone", "--depth", "1", rec.repoURL, tempDir.path], cwd: nil)
+        let clone = await Self.git(["clone", "--depth", "1", "--", rec.repoURL, tempDir.path], cwd: nil)
         guard clone.exitCode == 0 else {
             try? FileManager.default.removeItem(at: tempDir)
             throw PackError.gitFailed(clone.stderr.isEmpty ? clone.stdout : clone.stderr)

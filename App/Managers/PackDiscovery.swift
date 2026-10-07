@@ -5,6 +5,7 @@
 // 仍走"逐脚本审查 + 默认禁用"的安全流程。
 
 import Foundation
+import MenuMateCore
 
 struct DiscoveredPack: Identifiable, Decodable, Equatable {
     let fullName: String          // "owner/repo"
@@ -40,7 +41,7 @@ enum PackDiscovery {
         guard let url = comp.url else { throw NSError(domain: "PackDiscovery", code: -3) }
         var req = URLRequest(url: url)
         req.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
-        req.setValue("MenuMate", forHTTPHeaderField: "User-Agent")
+        req.setValue(Brand.name, forHTTPHeaderField: "User-Agent")
         req.timeoutInterval = 15
 
         let (data, resp) = try await URLSession.shared.data(for: req)

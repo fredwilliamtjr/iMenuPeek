@@ -16,7 +16,7 @@ enum ActionExampleInstaller {
             return MenuAction(id: UUID(), title: String(localized: "dialog.imageAction"),
                               icon: .symbol("photo"), kind: .runScript(ScriptSpec(scriptPath: root.appendingPathComponent("image-compress.zsh").path)),
                               matching: MatchRule(targets: .files, utis: ["public.jpeg"]),
-                              placement: .topLevel, isEnabled: false, sortOrder: sortOrder,
+                              placement: .submenu, isEnabled: false, sortOrder: sortOrder,
                               interface: ActionInterface(entry: root.appendingPathComponent("image-compress.html").path),
                               localizedTitles: LocalizedText.catalogTranslations("dialog.imageAction", bundle: .main))
         } catch {

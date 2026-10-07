@@ -38,8 +38,8 @@ jobs:
       - name: Build app + extension (compile check)
         run: |
           xcodebuild build \
-            -project MenuMate.xcodeproj \
-            -scheme MenuMate \
+            -project iMenuPeek.xcodeproj \
+            -scheme iMenuPeek \
             -configuration Debug \
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \

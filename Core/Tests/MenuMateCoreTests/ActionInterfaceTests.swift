@@ -67,6 +67,7 @@ final class ActionInterfaceTests: XCTestCase {
         action.variants = nil
         action.isEnabled = true
         action.interface = ActionInterface(entry: "ui/index.html")
+        action.placement = .topLevel   // presets vêm no submenu do app; aqui interessa o item no topo
         let menu = MenuBuilder.build(MenuBuildInput(config: MenuConfig(schemaVersion: 1, actions: [action]),
                                                     context: .container(directory), heartbeatFresh: true, variantListings: [:]))
         XCTAssertEqual(menu.first?.title, "Options…")

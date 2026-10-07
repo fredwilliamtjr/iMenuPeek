@@ -23,7 +23,7 @@ public enum LocalizedText {
 
     public static func catalogTranslations(_ key: String, bundle: Bundle) -> [String: String]? {
         var result: [String: String] = [:]
-        for language in ["en", "zh-Hans"] {
+        for language in ["en", "pt-BR", "zh-Hans"] {
             guard let path = bundle.path(forResource: language, ofType: "lproj"), let localized = Bundle(path: path) else { continue }
             let value = localized.localizedString(forKey: key, value: nil, table: nil)
             if value != key { result[language] = value }

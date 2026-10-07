@@ -7,7 +7,7 @@ public enum AppPaths {
     /// 配置根目录；ScriptSpec/VariantSource 的相对路径均基于此目录解析
     public static func configDirectory() -> URL {
         FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("MenuMate", isDirectory: true)
+            .appendingPathComponent(Brand.name, isDirectory: true)
     }
 
     public static func scriptsDirectory() -> URL {
@@ -24,7 +24,7 @@ public enum AppPaths {
         configDirectory().appendingPathComponent("Icons", isDirectory: true)
     }
 
-    /// 脚本可自由持久化状态的目录（经 MENUMATE_DATA 暴露，如 cut.sh 的 cutbuffer）
+    /// 脚本可自由持久化状态的目录（经 MENUMATE_DATA 暴露）
     public static func dataDirectory() -> URL {
         configDirectory().appendingPathComponent("Data", isDirectory: true)
     }

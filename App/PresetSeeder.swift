@@ -19,7 +19,7 @@ enum PresetSeeder {
         let scripts = bundledScripts()
         assert(!scripts.isEmpty, "预设脚本未打包进 bundle——检查 project.yml 的 PresetScripts resources 配置")
         if scripts.isEmpty {
-            NSLog("MenuMate: 警告——bundle 内无预设脚本，所有预设动作将失效")
+            NSLog("iMenuPeek: 警告——bundle 内无预设脚本，所有预设动作将失效")
         }
 
         var shipped = loadShipped()
@@ -52,7 +52,7 @@ enum PresetSeeder {
 
         let templates = AppPaths.templatesDirectory()
         if TemplateStore.list(in: templates).isEmpty {
-            fm.createFile(atPath: templates.appendingPathComponent("文本.txt").path, contents: Data())
+            fm.createFile(atPath: templates.appendingPathComponent("Texto.txt").path, contents: Data())
             fm.createFile(atPath: templates.appendingPathComponent("Markdown.md").path, contents: Data())
         }
     }

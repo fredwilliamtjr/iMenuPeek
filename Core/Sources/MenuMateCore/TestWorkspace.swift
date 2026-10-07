@@ -103,14 +103,6 @@ public struct TestWorkspace: Sendable {
                     inputs.append(url)
                 }
             }
-            // Exercise Paste Here without consuming the user's real cut buffer.
-            if action.presetKey == "paste" {
-                let seed = root.appendingPathComponent("PasteSource", isDirectory: true)
-                try fm.createDirectory(at: seed, withIntermediateDirectories: true)
-                let file = seed.appendingPathComponent("Sample.txt")
-                try "MenuMate temporary paste sample\n".write(to: file, atomically: true, encoding: .utf8)
-                try (file.path + "\n").write(to: data.appendingPathComponent("cutbuffer"), atomically: true, encoding: .utf8)
-            }
             let context: MatchContext = action.matching.targets == .container ? .container(inputDir) : .items(inputs)
             guard RuleMatcher.matches(rule: action.matching, context: context) else { throw Failure.mismatch }
             return TestWorkspace(directory: root, inputs: inputs, workingDirectory: inputDir,

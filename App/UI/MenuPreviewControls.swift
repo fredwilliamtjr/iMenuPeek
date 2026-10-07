@@ -48,7 +48,7 @@ struct MenuPreviewControls: View {
                 set: { input.contextIndex = $0; input.useExamples() }))
             if input.realContext != nil {
                 HStack(spacing: 6) {
-                    Text(String(format: String(localized: "menu.previewRealCount"), input.urls.count))
+                    Text(String.localizedStringWithFormat(NSLocalizedString("menu.previewRealCount", comment: ""), input.urls.count))
                         .font(.system(size: 11.5, weight: .medium))
                     Spacer(minLength: 0)
                     Button(String(localized: "menu.refresh")) { input.select(input.urls) }
@@ -74,7 +74,7 @@ struct MenuPreviewControls: View {
                     }
                     Spacer(minLength: 0)
                     Stepper(value: $input.selectionCount, in: 1...999) {
-                        Text(String(format: String(localized: "menu.previewExampleCount"), input.selectionCount))
+                        Text(String.localizedStringWithFormat(NSLocalizedString("menu.previewExampleCount", comment: ""), input.selectionCount))
                             .font(.system(size: 11.5))
                     }
                     .fixedSize()

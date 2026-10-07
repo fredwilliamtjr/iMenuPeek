@@ -21,17 +21,18 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px ui-monospace,monospace
 <div class="actions"><button id="cancel" type="button" data-i18n="cancel">Cancel</button><button id="run" type="button" data-i18n="run">Compress images</button></div>
 <script>
 const bridge=window.menumate, ctx=bridge.context;
-const zh=String(ctx.locale||'en').toLowerCase().startsWith('zh');
+const locale=String(ctx.locale||'en').toLowerCase(), zh=locale.startsWith('zh'), pt=locale.startsWith('pt');
 const messages={
  en:{title:'Compress JPEG images',subtitle:'JPEG images · Keep originals and create copies',quality:'JPEG quality',qualityHint:'Higher values retain more detail.',size:'Image size',original:'Keep original size',size1280:'Longest edge up to 1280 px',size1920:'Longest edge up to 1920 px',size2560:'Longest edge up to 2560 px',sizeHint:'Keep proportions. Smaller images are not enlarged.',output:'Output location',same:'Next to the originals',subfolder:'Compressed Images subfolder',outputHint:'Append “-compressed”; number existing filenames automatically.',remember:'Use these options next time',cancel:'Cancel',run:'Compress images',running:'Compressing…',done:'Done',success:'Compression complete',failed:'Execution failed'},
+ pt:{title:'Comprimir imagens JPEG',subtitle:'Imagens JPEG · Mantém os originais e cria cópias',quality:'Qualidade JPEG',qualityHint:'Valores maiores preservam mais detalhes.',size:'Tamanho da imagem',original:'Manter o tamanho original',size1280:'Lado maior até 1280 px',size1920:'Lado maior até 1920 px',size2560:'Lado maior até 2560 px',sizeHint:'Mantém a proporção. Imagens menores não são ampliadas.',output:'Onde salvar',same:'Junto dos originais',subfolder:'Subpasta “Imagens comprimidas”',outputHint:'Acrescenta “-comprimida” ao nome e numera automaticamente se já existir.',remember:'Usar estas opções da próxima vez',cancel:'Cancelar',run:'Comprimir imagens',running:'Comprimindo…',done:'OK',success:'Compressão concluída',failed:'Falha na execução'},
  zh:{title:'图片压缩',subtitle:'JPEG 图片 · 保留原图，生成副本',quality:'JPEG 质量',qualityHint:'数值越高，保留细节越多。',size:'图片尺寸',original:'保持原尺寸',size1280:'最长边不超过 1280 px',size1920:'最长边不超过 1920 px',size2560:'最长边不超过 2560 px',sizeHint:'保持比例，小图不放大。',output:'输出位置',same:'与原图同目录',subfolder:'原目录下的“压缩图片”文件夹',outputHint:'文件名追加“-压缩”，遇到重名自动编号。',remember:'下次沿用本次选项',cancel:'取消',run:'开始压缩',running:'正在压缩…',done:'完成',success:'压缩完成',failed:'执行失败'}
 };
-const t=zh?messages.zh:messages.en;
-document.documentElement.lang=zh?'zh-Hans':'en';
+const t=zh?messages.zh:pt?messages.pt:messages.en;
+document.documentElement.lang=zh?'zh-Hans':pt?'pt-BR':'en';
 document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t[el.dataset.i18n];});
 
 const quality=document.getElementById('quality'), size=document.getElementById('size'), output=document.getElementById('output');
-document.getElementById('files').textContent=(zh?ctx.files.length+' 张图片：':ctx.files.length+' image'+(ctx.files.length===1?'':'s')+': ')+ctx.files.map(f=>f.name).join(zh?'、':', ');
+document.getElementById('files').textContent=(zh?ctx.files.length+' 张图片：':pt?ctx.files.length+' imagem'+(ctx.files.length===1?'':'ns')+': ':ctx.files.length+' image'+(ctx.files.length===1?'':'s')+': ')+ctx.files.map(f=>f.name).join(zh?'、':', ');
 quality.value=ctx.parameters.quality||80; size.value=String(ctx.parameters.maxEdge??1920);output.value=ctx.parameters.output||'same';
 function showQuality(){document.getElementById('qualityValue').textContent=quality.value+' / 100';}
 showQuality();quality.addEventListener('input',showQuality);

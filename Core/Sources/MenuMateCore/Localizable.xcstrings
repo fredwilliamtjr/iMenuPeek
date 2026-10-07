@@ -9,6 +9,12 @@
             "value": "Copy Path"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar caminho"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -25,42 +31,16 @@
             "value": "New File"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Novo arquivo"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "新建文件"
-          }
-        }
-      }
-    },
-    "preset.cut": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cut"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "剪切"
-          }
-        }
-      }
-    },
-    "preset.pasteHere": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Paste Here"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "粘贴到此处"
           }
         }
       }
@@ -71,6 +51,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Go Up One Level"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subir um nível"
           }
         },
         "zh-Hans": {
@@ -89,6 +75,12 @@
             "value": "No built-in sample can satisfy this file type."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma amostra embutida atende a este tipo de arquivo."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -103,6 +95,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Generate between 1 and 20 sample items."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gere de 1 a 20 itens de amostra."
           }
         },
         "zh-Hans": {
@@ -121,6 +119,12 @@
             "value": "The generated samples do not satisfy the action’s selection rules."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As amostras geradas não atendem às regras de seleção da ação."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -137,6 +141,12 @@
             "value": "Folder"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -148,6 +158,12 @@
     "test.appType": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "App"
@@ -169,6 +185,12 @@
             "value": "This action uses a custom submenu directory. Generated trial runs currently support only the standard Templates directory; your files will not be used."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta ação usa um diretório de submenu personalizado. Os testes com amostras geradas só aceitam, por enquanto, o diretório padrão Templates; seus arquivos não serão usados."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -183,6 +205,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "The pack recovery record is invalid. Backups have been preserved."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O registro de recuperação do pacote é inválido. Os backups foram preservados."
           }
         },
         "zh-Hans": {
@@ -201,6 +229,12 @@
             "value": "The pack installation path is invalid."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O caminho de instalação do pacote é inválido."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -215,6 +249,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "An interrupted pack operation must be recovered first."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "É preciso recuperar antes uma operação de pacote interrompida."
           }
         },
         "zh-Hans": {
@@ -233,10 +273,38 @@
             "value": "Configuration changed during this operation. Please try again."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A configuração mudou durante esta operação. Tente de novo."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "操作期间配置已被修改，请重试。"
+          }
+        }
+      }
+    },
+    "preset.toggleHidden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide / Unhide"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocultar / Reexibir"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏 / 显示"
           }
         }
       }

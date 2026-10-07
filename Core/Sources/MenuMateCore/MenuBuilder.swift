@@ -51,7 +51,7 @@ public enum MenuBuilder {
             if action.placement == .submenu { grouped.append(spec) } else { top.append(spec) }
         }
         if !grouped.isEmpty {
-            top.append(MenuItemSpec(title: "MenuMate", symbol: nil, request: nil, children: grouped))
+            top.append(MenuItemSpec(title: Brand.name, symbol: Brand.menuSymbol, request: nil, children: grouped))
         }
         return top
     }

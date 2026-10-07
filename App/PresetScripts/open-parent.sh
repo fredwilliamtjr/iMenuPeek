@@ -1,8 +1,8 @@
 #!/bin/zsh
 # 「前往上一层级目录」:在当前文件浏览器里上一层(不开新窗、不打断你)。
 # - 前台是 Finder:用 AppleScript 把前台 Finder 窗口切到父目录(需「自动化 › Finder」授权,一次性)。
-# - 前台是别的 App(如浏览器的上传/打开对话框):发 ⌘↑——macOS 的打开/保存面板原生支持
-#   ⌘↑ 上一层(需「辅助功能」授权,一次性)。
+# - 前台是别的 App(如上传/打开对话框):iMenuPeek 不申请「辅助功能」,无法替你发 ⌘↑;
+#   脚本只提示用 ⌘↑ 本身。
 # 右键文件夹空白处触发;$1 = 当前文件夹路径。
 cur="${1:-$PWD}"
 parent="${cur:h}"
@@ -21,9 +21,6 @@ on run argv
 end run
 APPLESCRIPT
 else
-  # 非 Finder(上传/打开对话框等):发 ⌘↑ 让该面板上一层。
-  if ! osascript -e 'tell application "System Events" to key code 126 using command down' >/dev/null 2>&1; then
-    print -u2 "需在『系统设置 › 隐私与安全性 › 辅助功能』勾选 MenuMate,才能在上传/打开对话框里上一层。"
-    exit 1
-  fi
+  print -u2 "Fora do Finder (ex.: janela de abrir/salvar), use ⌘↑ para subir um nível."
+  exit 1
 fi

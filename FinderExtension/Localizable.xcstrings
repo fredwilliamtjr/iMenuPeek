@@ -1,21 +1,31 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "ext.ipcKeyMissing" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "iMenuPeek: missing IPC key — reopen the app" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "iMenuPeek: chave de comunicação ausente — reabra o app" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "iMenuPeek：缺少通信密钥——请重新打开 App" } }
+      }
+    },
     "ext.launchMenuMate" : {
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Launch MenuMate" } },
-        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启动 MenuMate" } }
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Launch iMenuPeek" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Abrir o iMenuPeek" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启动 iMenuPeek" } }
       }
     },
     "ext.loadingMenu" : {
       "localizations" : {
         "en" : { "stringUnit" : { "state" : "translated", "value" : "Loading menu…" } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Carregando menu…" } },
         "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "菜单加载中…" } }
       }
     },
     "ext.tooManyItems" : {
       "localizations" : {
         "en" : { "stringUnit" : { "state" : "translated", "value" : "Too many items selected (>%lld). Select fewer." } },
+        "pt-BR" : { "stringUnit" : { "state" : "translated", "value" : "Itens demais selecionados (>%lld). Selecione menos." } },
         "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选中项过多（>%lld），请减少选择" } }
       }
     }

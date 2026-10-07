@@ -24,13 +24,13 @@ test-storage:
 	python3 scripts/test-storage.py
 
 build: gen
-	xcodebuild -project MenuMate.xcodeproj -scheme MenuMate -configuration Debug \
+	xcodebuild -project iMenuPeek.xcodeproj -scheme iMenuPeek -configuration Debug \
 	  -derivedDataPath build build
 
 run: build
-	open build/Build/Products/Debug/MenuMate.app
+	open build/Build/Products/Debug/iMenuPeek.app
 
-# 签名 + 公证 + dmg + Sparkle 签名(需 Developer ID 证书与公证凭据,见 docs/RELEASING.md)
+# 签名 + 公证 + dmg(需 Developer ID 证书与公证凭据,见 docs/RELEASING.md)
 # 用法: make release VERSION=1.0.0
 release: gen
 	@chmod +x scripts/release.sh && scripts/release.sh $(VERSION)

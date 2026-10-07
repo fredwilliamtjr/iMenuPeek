@@ -11,11 +11,11 @@ struct ManagedExtension: Identifiable {
 @MainActor
 final class ExtensionManager: ObservableObject {
     @Published var extensions: [ManagedExtension] = []
-    static let ownBundleID = "com.menumate.app.FinderExtension"
+    static let ownBundleID = Brand.extensionBundleID
 
     /// 串行队列：pluginkit 为阻塞调用（枚举/写入各 10s 超时），
     /// 移出主线程避免每次开关冻结 UI；串行保证「写入 → 回读」顺序。
-    private static let queue = DispatchQueue(label: "com.menumate.extensions", qos: .userInitiated)
+    private static let queue = DispatchQueue(label: Brand.appBundleID + ".extensions", qos: .userInitiated)
 
     func reload() {
         Self.queue.async { [weak self] in

@@ -29,7 +29,7 @@ struct SettingsWindow: View {
                 .padding(12)
             }
         }
-        .frame(minWidth: 760, minHeight: 560)
+        .frame(minWidth: 1000, minHeight: 620)
     }
 }
 

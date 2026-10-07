@@ -62,7 +62,7 @@ struct ScreenMenuHub: View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 sidebar
-                    .frame(width: 326)
+                    .frame(width: 380)   // iMenuPeek: textos em pt-BR são mais longos (era 326)
                     .background(.regularMaterial)
                     .overlay(alignment: .trailing) {
                         Rectangle().fill(MMColor.separator).frame(width: 0.5)
@@ -231,7 +231,7 @@ struct ScreenMenuHub: View {
             HStack(spacing: 8) {
                 Color.clear.frame(width: 13, height: 1)
                 AppIcon("line.3.horizontal", size: 17, hue: .blue)
-                Text("MenuMate")
+                Text(Brand.name)
                     .font(.system(size: 12.5))
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")
@@ -601,7 +601,7 @@ struct ScreenMenuHub: View {
         let new = MenuAction(
             id: UUID(), title: String(localized: "menu.newActionDefaultTitle"), icon: .symbol("bolt"),
             kind: .runScript(ScriptSpec()), matching: MatchRule(),
-            placement: .topLevel, isEnabled: false,
+            placement: .submenu, isEnabled: false,
             sortOrder: (state.config.actions.map(\.sortOrder).max() ?? 0) + 1)
         if saveAction(new) { selection = .ownAction(new.id) }
     }

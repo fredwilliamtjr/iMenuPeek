@@ -1,6 +1,6 @@
-name: MenuMate
+name: iMenuPeek
 options:
-  bundleIdPrefix: com.menumate
+  bundleIdPrefix: com.smartfull
   developmentLanguage: en
   deploymentTarget:
     macOS: "13.0"
@@ -12,12 +12,13 @@ settings:
   base:
     SWIFT_VERSION: "5.9"
     # 版本默认值;发布时 scripts/release.sh 用 tag 覆盖 MARKETING_VERSION + 单调的 CURRENT_PROJECT_VERSION,
-    # 经下方 Info.plist 的 $(MARKETING_VERSION)/$(CURRENT_PROJECT_VERSION) 注入 → Sparkle 跨版本比较才正确。
+    # 经下方 Info.plist 的 $(MARKETING_VERSION)/$(CURRENT_PROJECT_VERSION) 注入。
+    # iMenuPeek 不带自动更新(Sparkle 已移除):新版本只经 GitHub Releases 发布。
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: "1"
     # 签名由 Local.xcconfig 控制（默认 ad-hoc；正式分发用 Developer ID）
 targets:
-  MenuMate:
+  iMenuPeek:
     type: application
     platform: macOS
     sources:
@@ -30,28 +31,21 @@ targets:
         buildPhase: resources
     dependencies:
       - package: MenuMateCore
-      - package: Sparkle
       - target: FinderExtension
         embed: true
     info:
       path: App/Info.plist
       properties:
-        CFBundleDisplayName: MenuMate
+        CFBundleDisplayName: iMenuPeek
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         LSUIElement: true
-        # Sparkle 自动更新:appcast 由发布流程更新到仓库,公钥用你的 EdDSA 公钥替换。见 docs/RELEASING.md。
-        SUFeedURL: https://raw.githubusercontent.com/Hibrielle/menumate/main/appcast.xml
-        SUPublicEDKey: REPLACE_WITH_YOUR_SPARKLE_PUBLIC_KEY
-        # 正式签名发布 + 填好公钥前,关闭自动检查,避免开发版启动弹「无法检查更新」。
-        # 发布后改为 true(或删掉)即可恢复后台自动更新。手动「检查更新」始终可用。
-        SUEnableAutomaticChecks: false
         # 「前往上一层级目录 / 前往所在目录」等预设用 osascript 控制 Finder 做同窗导航；
         # 主 App 非沙盒，发 Apple Event 需声明此用途串，否则 macOS 自动化授权会被静默拒。
-        NSAppleEventsUsageDescription: "MenuMate 会在你启用的右键预设里控制 Finder，用于在当前窗口内导航（如「前往上一层级目录」「前往所在目录」）。"
+        NSAppleEventsUsageDescription: "O iMenuPeek controla o Finder nas ações do menu de botão direito que você ativar, para navegar na própria janela (como \"Subir um nível\")."
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.menumate.app
+        PRODUCT_BUNDLE_IDENTIFIER: com.smartfull.imenupeek
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
   FinderExtension:
     type: app-extension
@@ -62,7 +56,7 @@ targets:
     info:
       path: FinderExtension/Info.plist
       properties:
-        CFBundleDisplayName: MenuMate Finder Extension
+        CFBundleDisplayName: iMenuPeek Finder Extension
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         NSExtension:
@@ -72,19 +66,19 @@ targets:
       path: FinderExtension/FinderExtension.entitlements
       properties:
         com.apple.security.app-sandbox: true
+        # Única leitura de arquivo da extensão: a chave de IPC (IPCAuth) criada pelo app.
+        com.apple.security.temporary-exception.files.home-relative-path.read-only:
+          - /Library/Application Support/iMenuPeek/IPC/
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.menumate.app.FinderExtension
+        PRODUCT_BUNDLE_IDENTIFIER: com.smartfull.imenupeek.FinderExtension
 packages:
   MenuMateCore:
     path: Core
-  Sparkle:
-    url: https://github.com/sparkle-project/Sparkle
-    from: "2.6.0"
 schemes:
-  MenuMate:
+  iMenuPeek:
     build:
       targets:
-        MenuMate: all
+        iMenuPeek: all
     run:
       config: Debug

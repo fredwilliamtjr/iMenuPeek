@@ -1,6 +1,6 @@
 #!/bin/zsh
 # 预设脚本的确定性行为测试(不依赖 Finder/剪贴板,CI 可跑)。
-# 覆盖:new-file 模板复制 + 自动重名编号;cut+paste 经 cutbuffer 移动。
+# 覆盖:new-file 模板复制 + 自动重名编号。
 set -euo pipefail
 ROOT="${0:A:h:h}"
 PRESETS="$ROOT/App/PresetScripts"
@@ -21,15 +21,15 @@ MENUMATE_TEMPLATES="$tpl" MENUMATE_VARIANT="Note.md" /bin/zsh "$PRESETS/new-file
 MENUMATE_TEMPLATES="$tpl" MENUMATE_VARIANT="Note.md" /bin/zsh "$PRESETS/new-file.sh" "$work" >/dev/null
 [[ -f "$work/Note 2.md" ]] || fail "new-file 未自动编号为 'Note 2.md'"
 
-# --- cut + paste: 经 cutbuffer 移动 ---
-data="$T/data"; mkdir -p "$data"
-src="$T/src"; mkdir -p "$src"; print x > "$src/a.txt"; print y > "$src/b.txt"
-dst="$T/dst"; mkdir -p "$dst"
-MENUMATE_DATA="$data" /bin/zsh "$PRESETS/cut.sh" "$src/a.txt" "$src/b.txt" >/dev/null
-[[ -s "$data/cutbuffer" ]] || fail "cut 未写 cutbuffer"
-MENUMATE_DATA="$data" /bin/zsh "$PRESETS/paste.sh" "$dst" >/dev/null
-[[ -f "$dst/a.txt" && -f "$dst/b.txt" ]] || fail "paste 未移动到目标"
-[[ ! -e "$src/a.txt" && ! -e "$src/b.txt" ]] || fail "paste 未从源删除(应为移动)"
-[[ ! -e "$data/cutbuffer" ]] || fail "paste 未清空 cutbuffer"
+# --- toggle-hidden: inverte o atributo oculto, inclusive com espaço no nome ---
+hid="$T/hid"; mkdir -p "$hid"; print a > "$hid/a b.txt"; print b > "$hid/c.txt"
+chflags hidden "$hid/c.txt"
+out=$(MENUMATE_LOCALE=pt-BR /bin/zsh "$PRESETS/toggle-hidden.sh" "$hid/a b.txt" "$hid/c.txt") || fail "toggle-hidden falhou"
+(( $(stat -f '%f' "$hid/a b.txt") & 0x8000 )) || fail "toggle-hidden não ocultou 'a b.txt'"
+(( $(stat -f '%f' "$hid/c.txt") & 0x8000 )) && fail "toggle-hidden não reexibiu 'c.txt'"
+[[ "$out" == "Ocultados: 1 · Reexibidos: 1" ]] || fail "toggle-hidden mensagem inesperada: $out"
+MENUMATE_LOCALE=pt-BR /bin/zsh "$PRESETS/toggle-hidden.sh" "$hid/a b.txt" >/dev/null
+(( $(stat -f '%f' "$hid/a b.txt") & 0x8000 )) && fail "toggle-hidden não reverteu 'a b.txt'"
+MENUMATE_LOCALE=pt-BR /bin/zsh "$PRESETS/toggle-hidden.sh" "$hid/inexistente" >/dev/null 2>&1 && fail "toggle-hidden deveria falhar com item inexistente"
 
-print "✓ preset scripts: new-file (auto-number) + cut/paste (move) pass"
+print "✓ preset scripts: new-file (auto-number) + toggle-hidden pass"

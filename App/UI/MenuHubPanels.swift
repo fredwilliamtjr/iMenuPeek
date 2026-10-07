@@ -31,7 +31,7 @@ struct PvField<Content: View>: View {
             Text(label)
                 .font(.system(size: 12))
                 .foregroundStyle(MMColor.label2)
-                .frame(width: 70, alignment: .trailing)
+                .frame(width: 110, alignment: .trailing)   // pt-BR: "Restringir tipos" numa linha (era 70)
             VStack(alignment: .leading, spacing: 3) {
                 content
                 if let hint {
@@ -568,7 +568,7 @@ struct PvPackPanel: View {
     var title: String = "上传到图床"
     var previewPackName: String = "dev-tools"
     var menuTitle: String = "上传到图床"
-    var placement: String = "子菜单「MenuMate ▸」"
+    var placement: String = "子菜单「iMenuPeek ▸」"
     var target: String = "仅文件"
     var uti: String = "public.image"
     var script: String = "#!/bin/zsh\n# upload-to-imagebed.zsh — 只读\n: ${IMGBED_TOKEN:?}\ncurl -fsS -F \"file=@$1\" $API | pbcopy"

@@ -21,10 +21,10 @@ final class IPCTests: XCTestCase {
     }
 
     func testNotificationNamesAreStable() {
-        XCTAssertEqual(IPC.actionNotification, "com.menumate.action")
-        XCTAssertEqual(IPC.heartbeatNotification, "com.menumate.heartbeat")
-        XCTAssertEqual(IPC.snapshotNotification, "com.menumate.snapshot")
-        XCTAssertEqual(IPC.snapshotRequestNotification, "com.menumate.snapshot-request")
+        XCTAssertEqual(IPC.actionNotification, "com.smartfull.imenupeek.action")
+        XCTAssertEqual(IPC.heartbeatNotification, "com.smartfull.imenupeek.heartbeat")
+        XCTAssertEqual(IPC.snapshotNotification, "com.smartfull.imenupeek.snapshot")
+        XCTAssertEqual(IPC.snapshotRequestNotification, "com.smartfull.imenupeek.snapshot-request")
     }
 
     func testMaxPathsConstant() {
@@ -40,7 +40,7 @@ final class IPCTests: XCTestCase {
                                          variantListings: [newFileID: ["文本.txt", "Markdown.md"]])
         let decoded = try ExtensionSnapshot.decode(try snapshot.encodedString())
         XCTAssertEqual(decoded, snapshot)
-        XCTAssertEqual(decoded.config.actions.count, 6)
+        XCTAssertEqual(decoded.config.actions.count, 5)
         XCTAssertEqual(decoded.variantListings[newFileID], ["文本.txt", "Markdown.md"])
     }
 
@@ -75,7 +75,9 @@ final class IPCTests: XCTestCase {
         let specs = MenuBuilder.build(MenuBuildInput(
             config: decoded.config, context: .container(FileManager.default.temporaryDirectory),
             heartbeatFresh: true, variantListings: decoded.variantListings))
-        XCTAssertEqual(specs.first { $0.title == newFile.title }?.children.map(\.title), ["A.txt", "B.md"])
+        // presets ficam no submenu do app (iMenuPeek ▸)
+        let group = try XCTUnwrap(specs.first { $0.title == Brand.name })
+        XCTAssertEqual(group.children.first { $0.title == newFile.title }?.children.map(\.title), ["A.txt", "B.md"])
     }
 
     func testExtensionSnapshotIconImagesRoundTrip() throws {

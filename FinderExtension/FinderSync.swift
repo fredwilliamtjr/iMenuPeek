@@ -61,6 +61,10 @@ class FinderSync: FIFinderSync {
         guard Date().timeIntervalSince(lastHeartbeat) < 10 else {
             return singleItemMenu(title: String(localized: "ext.launchMenuMate"))
         }
+        // Sem a chave de IPC o app recusaria todo clique; melhor avisar no próprio menu.
+        guard IPCAuth.readKey() != nil else {
+            return singleItemMenu(title: String(localized: "ext.ipcKeyMissing"), enabled: false)
+        }
         guard let snap = snapshot else {
             requestSnapshot()   // 主 App 在跑（心跳新鲜）但快照未达：催一份，下次右键即可用
             return singleItemMenu(title: String(localized: "ext.loadingMenu"), enabled: false)
@@ -116,7 +120,7 @@ class FinderSync: FIFinderSync {
             image.size = NSSize(width: 16, height: 16)   // 菜单图标尺寸
             item.image = image
         } else if let symbol = spec.symbol {
-            item.image = NSImage(systemSymbolName: symbol, accessibilityDescription: nil)
+            item.image = themedSymbol(symbol)
         }
         if var request = spec.request {
             request.paths = contextPaths(context)
@@ -135,6 +139,18 @@ class FinderSync: FIFinderSync {
         return item
     }
 
+    /// O Finder não aplica a cor do tema nos ícones (template) de menus de extensão — saíam pretos
+    /// no tema escuro. Pinta o símbolo com a cor do texto do menu no tema atual; o menu é montado
+    /// a cada clique com o botão direito, então trocar o tema vale no próximo menu.
+    private func themedSymbol(_ name: String) -> NSImage? {
+        guard let base = NSImage(systemSymbolName: name, accessibilityDescription: nil) else { return nil }
+        var color = NSColor.black
+        NSApplication.shared.effectiveAppearance.performAsCurrentDrawingAppearance {
+            color = NSColor.labelColor.usingColorSpace(.sRGB) ?? .black
+        }
+        return base.withSymbolConfiguration(NSImage.SymbolConfiguration(paletteColors: [color])) ?? base
+    }
+
     private func contextPaths(_ context: MatchContext) -> [String] {
         switch context {
         case .items(let urls): return urls.map(\.path)
@@ -145,9 +161,11 @@ class FinderSync: FIFinderSync {
     // MARK: - 动作
 
     @objc private func menuItemClicked(_ sender: NSMenuItem) {
-        guard let payload = pendingRequests[sender.tag] else { return }
-        // 载荷一律分块发送（小载荷即单块），任何尺寸都不落盘
-        for chunk in ChunkedTransport.split(payload) {
+        guard let payload = pendingRequests[sender.tag],
+              let key = IPCAuth.readKey(),
+              let signed = try? IPCAuth.sign(payload: payload, key: key) else { return }
+        // 载荷一律分块发送（小载荷即单块），任何尺寸都不落盘;assinado no clique (carimbo de tempo atual)
+        for chunk in ChunkedTransport.split(signed) {
             guard let envelope = try? chunk.encodedString() else { return }
             DistributedNotificationCenter.default().postNotificationName(
                 .init(IPC.actionNotification), object: envelope, userInfo: nil, deliverImmediately: true)

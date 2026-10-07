@@ -6,6 +6,7 @@ struct ActionTitleLocalizations: View {
     var body: some View {
         DisclosureGroup(String(localized: "editor.localizedTitles")) {
             VStack(alignment: .leading, spacing: 8) {
+                field("pt-BR", label: String(localized: "editor.languagePortuguese"))
                 field("en", label: String(localized: "editor.languageEnglish"))
                 field("zh-Hans", label: String(localized: "editor.languageChinese"))
             }

@@ -1,49 +1,33 @@
-# Security
+# Segurança
 
-## Reporting a vulnerability
+## Como reportar uma vulnerabilidade
 
-Please report security issues privately via **GitHub Security Advisories**
-(repo → Security → *Report a vulnerability*) rather than a public issue. We aim to
-acknowledge within a few days.
+Use os **GitHub Security Advisories** do repositório (Security → *Report a vulnerability*), não uma issue pública.
 
-## Threat model & design notes
+## Modelo de ameaça e decisões de projeto
 
-MenuMate ships as a **non-sandboxed** Developer ID app plus a **sandboxed** Finder Sync
-extension. The security posture follows from that split.
+O iMenuPeek é um app **sem sandbox** com uma extensão Finder Sync **com sandbox**. A postura de segurança decorre dessa divisão.
 
-- **Scripts run as you.** Presets, your own actions, and imported pack actions are plain
-  `zsh` scripts executed with your user privileges — the same trust level as anything you
-  run in Terminal. Only enable actions and packs whose scripts you've read. Scripts are
-  invoked via `/bin/zsh "$script" "$@"` with inputs passed as arguments/`MENUMATE_PATHS`;
-  MenuMate never `eval`s or string-interpolates selected paths into a command.
+- **Os scripts rodam como você.** Presets, ações suas e ações de pacotes importados são scripts `zsh` executados com as suas permissões de usuário — o mesmo nível de confiança de qualquer coisa que você rode no Terminal. Só ative ações e pacotes cujos scripts você leu. Os scripts são chamados como `/bin/zsh "$script" "$@"`, com as entradas passadas como argumentos/`MENUMATE_PATHS`; o app nunca faz `eval` nem interpola caminhos selecionados num comando.
 
-- **Extension packs are read-only on import and default-disabled.** Import is a
-  `git clone --depth 1` that **never executes anything**. The review step shows every
-  manifest-declared script **and every other non-metadata file in the repo** (hidden
-  scripts, executables, and binaries are flagged), because a declared script can `source`
-  sibling files via `pack_root`. Imported actions are added **disabled** until you enable
-  them individually.
+- **Pedidos de ação são autenticados (iMenuPeek).** A extensão manda os cliques ao app pela `DistributedNotificationCenter`, que qualquer processo pode escutar e postar — inclusive apps com sandbox. Por isso cada pedido é assinado com HMAC-SHA256 usando uma chave gerada por instalação em `~/Library/Application Support/iMenuPeek/IPC/ipc.key` (pasta 0700, arquivo 0600):
+  - apps de terceiros com sandbox não leem esse arquivo; a extensão lê por uma exceção de sandbox somente leitura restrita à pasta `IPC/`;
+  - quem escuta um pedido legítimo não consegue forjar outro (sem a chave) nem repeti-lo (janela de 30 s + nonce de uso único);
+  - pedido sem assinatura válida é recusado e registrado no log do sistema;
+  - além disso, todo clique continua sendo revalidado contra a configuração local: a ação precisa existir, estar ativa e os caminhos precisam existir.
 
-- **The App↔extension snapshot is not a privilege boundary.** The app pushes the menu
-  config (and, at click time, the right-clicked paths) to the extension over
-  `DistributedNotificationCenter`, which is **readable by any process running as the same
-  user**. This is acceptable: a same-user process already has equivalent filesystem access
-  to the same `config.json` and files. There is no App Group container (that's deliberate —
-  it's what avoids the macOS "wants to access data from other apps" prompts). A **forged**
-  snapshot can at worst change how the menu *looks* — it can never run a script, because
-  every click is re-validated against the local on-disk config: the action id must exist,
-  be enabled, and its script path must exist on disk.
+  Processos sem sandbox do mesmo usuário conseguem ler a chave, mas esses já têm acesso equivalente aos seus arquivos.
 
-- **"Remove Quarantine" is a deliberate Gatekeeper bypass.** If you add an action that
-  deletes `com.apple.quarantine`, only run it on files you trust — it removes the macOS
-  "downloaded from the internet / unidentified developer" check for those items.
+- **O snapshot app → extensão não é fronteira de privilégio.** O app envia a configuração do menu à extensão pela mesma `DistributedNotificationCenter`, legível por processos do mesmo usuário. Um snapshot forjado só muda a *aparência* do menu; não executa nada, porque o clique precisa ser assinado e é revalidado contra a configuração local.
 
-- **Permissions are requested once.** MenuMate asks for Automation (to drive Finder /
-  System Events for in-window navigation) and, optionally, Accessibility (to send `⌘↑` in
-  non-Finder upload dialogs). It does not require Full Disk Access.
+- **Sem presets que movem arquivos.** Os presets Cut/Paste do MenuMate foram removidos: eram ações ativadas por padrão que moviam arquivos e podiam ser disparadas sem clique do usuário.
 
-- **The AI-authoring path edits local files directly.** The
-  [`menumate-author`](skills/menumate-author/SKILL.md) skill and any external editor write
-  `config.json` / `Scripts/` directly, bypassing the pack-review gate. That's intended for
-  *your own* automation; treat AI- or script-authored actions with the same scrutiny you'd
-  give code you wrote.
+- **Sem Acessibilidade.** O iMenuPeek não pede a permissão de Acessibilidade: scripts são processos filhos do app e herdariam o poder de sintetizar teclas e controlar outros apps. Ele pede apenas Notificações (avisar falhas) e Automação › Finder (navegar na janela do Finder). Não exige Acesso Total ao Disco.
+
+- **Sem atualização automática.** O Sparkle foi removido; o app não consulta nenhum feed de atualização. Versões novas saem só pelas Releases do GitHub.
+
+- **Pacotes de extensão são somente leitura na importação e vêm desativados.** A importação é um `git clone --depth 1 -- <url>` que **não executa nada** (o `--` impede que a URL digitada vire opção do git). A revisão mostra cada script declarado no manifesto **e todo outro arquivo do repositório** (scripts ocultos, executáveis e binários são sinalizados), porque um script declarado pode fazer `source` de arquivos vizinhos. As ações importadas entram **desativadas** até você ativá-las uma a uma.
+
+- **"Remover quarentena" ignora o Gatekeeper de propósito.** Se você criar uma ação que remove `com.apple.quarantine`, use só em arquivos em que confia.
+
+- **O caminho de autoria por IA edita arquivos locais direto.** A skill [`menumate-author`](skills/menumate-author/SKILL.md) e qualquer editor externo escrevem `config.json` / `Scripts/` diretamente, sem a revisão de pacotes. Trate ações escritas por IA ou por script com o mesmo cuidado de código seu.

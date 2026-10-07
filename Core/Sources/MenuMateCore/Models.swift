@@ -151,10 +151,10 @@ public extension MenuConfig {
             MenuAction(id: UUID.deterministic(key),
                        title: String(localized: titleKey, bundle: .module), icon: .symbol(symbol),
                        kind: .runScript(ScriptSpec(scriptPath: "Scripts/\(script)")),
-                       matching: rule, placement: .topLevel, variants: variants,
+                       matching: rule, placement: .submenu, variants: variants,   // iMenuPeek: tudo no submenu do app
                        presetKey: key, isEnabled: true, sortOrder: order)
         }
-        // 内置=通用、填补 Finder 空缺、零外部假设的 6 条。
+        // 内置=通用、填补 Finder 空缺、零外部假设的 5 条。
         // 专用能力作为可选扩展包:Developer(在终端/编辑器打开)、Image(图片转换)——
         // 见 github.com/Hibrielle/menumate-dev-pack、menumate-image-pack。
         return MenuConfig(schemaVersion: currentSchemaVersion, actions: [
@@ -162,15 +162,17 @@ public extension MenuConfig {
                    MatchRule(targets: .any), 0),
             preset("new-file", "preset.newFile", "doc.badge.plus", "new-file.sh",
                    MatchRule(targets: .container), 1, variants: .directoryListing("Templates")),
-            preset("cut", "preset.cut", "scissors", "cut.sh", MatchRule(targets: .any), 2),
-            preset("paste", "preset.pasteHere", "doc.on.clipboard", "paste.sh",
-                   MatchRule(targets: .container), 3),
+            // iMenuPeek: sem os presets Cut/Paste do MenuMate — mover arquivos por uma ação
+            // disparável via notificação distribuída era a brecha principal da revisão de segurança.
             preset("open-parent", "preset.goUp", "arrow.up", "open-parent.sh",
-                   MatchRule(targets: .container), 4),
+                   MatchRule(targets: .container), 2),
             // 与上面同名:右键空白处(open-parent/.container)与右键文件(此条/.any)互斥,
             // 用户无论点哪里都看到一个「上一层」,行为一致。
             preset("open-enclosing", "preset.goUp", "arrow.up", "open-enclosing.sh",
-                   MatchRule(targets: .any), 5),
+                   MatchRule(targets: .any), 3),
+            // iMenuPeek: ocultar/reexibir os itens selecionados (inverte o atributo oculto, chflags).
+            preset("toggle-hidden", "preset.toggleHidden", "eye.slash", "toggle-hidden.sh",
+                   MatchRule(targets: .any), 4),
         ])
     }
 }

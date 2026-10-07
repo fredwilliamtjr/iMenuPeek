@@ -107,7 +107,7 @@ struct ActionTestSheet: View {
                     }
                     .frame(width: 170)
                     if model.action.matching.targets != .container {
-                        Stepper(String(format: String(localized: "menu.previewExampleCount"), model.count),
+                        Stepper(String.localizedStringWithFormat(NSLocalizedString("menu.previewExampleCount", comment: ""), model.count),
                                 value: $model.count, in: 1...20)
                     }
                     Spacer(minLength: 0)

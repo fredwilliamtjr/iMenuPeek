@@ -2,7 +2,7 @@ import Foundation
 import MenuMateCore
 
 final class ActionRunner: ActionRunning {
-    private static let queue = DispatchQueue(label: "com.menumate.action-runner", qos: .userInitiated)
+    private static let queue = DispatchQueue(label: Brand.appBundleID + ".action-runner", qos: .userInitiated)
 
     /// 执行环境契约的非选中相关部分(模板/数据目录 + 用户选的终端/编辑器)。
     /// 抽出来供真实执行与编辑器「试运行」共用,保证两者环境一致、不漂移。

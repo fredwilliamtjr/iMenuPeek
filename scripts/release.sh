@@ -1,5 +1,5 @@
 #!/bin/zsh
-# MenuMate release pipeline: archive → Developer ID sign → dmg → notarize → staple → Sparkle sign.
+# iMenuPeek release pipeline: archive → Developer ID sign → dmg → notarize → staple.
 #
 # Requires (see docs/RELEASING.md):
 #   DEVELOPER_ID_APP   "Developer ID Application: Your Name (TEAMID)"  (signing identity)
@@ -8,8 +8,6 @@
 #     NOTARY_PROFILE   profile name created via `notarytool store-credentials`
 #   OR App Store Connect API key (used by CI):
 #     NOTARY_KEY_ID, NOTARY_ISSUER, NOTARY_KEY_PATH (path to AuthKey_XXXX.p8)
-#   Sparkle EdDSA key — locally read from the keychain by sign_update; in CI set:
-#     SPARKLE_ED_PRIVATE_KEY  (base64 private key string)
 #
 # Usage: scripts/release.sh <version>     e.g. scripts/release.sh 1.0.0
 set -euo pipefail
@@ -22,26 +20,21 @@ cd "$ROOT"
 : "${TEAM_ID:?set TEAM_ID}"
 
 BUILD="$ROOT/build/release"
-ARCHIVE="$BUILD/MenuMate.xcarchive"
+ARCHIVE="$BUILD/iMenuPeek.xcarchive"
 EXPORT="$BUILD/export"
-DMG="$BUILD/MenuMate-$VERSION.dmg"
-SPARKLE_BIN="$ROOT/build/SourcePackages/artifacts/sparkle/Sparkle/bin"
+DMG="$BUILD/iMenuPeek-$VERSION.dmg"
 
 echo "==> Generating project"
 make gen >/dev/null
 
-echo "==> Resolving Swift packages (ensures the Sparkle CLI tools are present)"
-xcodebuild -project MenuMate.xcodeproj -scheme MenuMate \
-  -derivedDataPath "$ROOT/build" -resolvePackageDependencies >/dev/null
-
-# Inject the release version into the build so Info.plist (and thus Sparkle's update
-# comparison) matches the tag. CFBundleVersion uses a monotonic commit count.
+# Inject the release version into the build so Info.plist matches the tag.
+# CFBundleVersion uses a monotonic commit count.
 BUILD_NUMBER="$(git -C "$ROOT" rev-list --count HEAD 2>/dev/null || echo 1)"
 echo "==> Version: MARKETING_VERSION=$VERSION  CURRENT_PROJECT_VERSION=$BUILD_NUMBER"
 
 echo "==> Archiving (Release, Developer ID, hardened runtime)"
 rm -rf "$ARCHIVE" "$EXPORT"
-xcodebuild -project MenuMate.xcodeproj -scheme MenuMate -configuration Release \
+xcodebuild -project iMenuPeek.xcodeproj -scheme iMenuPeek -configuration Release \
   -derivedDataPath "$ROOT/build" \
   archive -archivePath "$ARCHIVE" \
   MARKETING_VERSION="$VERSION" \
@@ -55,14 +48,14 @@ xcodebuild -project MenuMate.xcodeproj -scheme MenuMate -configuration Release \
 echo "==> Exporting Developer ID app"
 xcodebuild -exportArchive -archivePath "$ARCHIVE" \
   -exportPath "$EXPORT" -exportOptionsPlist "$ROOT/scripts/ExportOptions.plist" | tail -3
-APP="$EXPORT/MenuMate.app"
+APP="$EXPORT/iMenuPeek.app"
 
 echo "==> Building dmg"
 STAGE="$BUILD/dmg"; rm -rf "$STAGE"; mkdir -p "$STAGE"
 cp -R "$APP" "$STAGE/"
 ln -s /Applications "$STAGE/Applications"
 rm -f "$DMG"
-hdiutil create -volname "MenuMate" -srcfolder "$STAGE" -ov -format UDZO "$DMG" >/dev/null
+hdiutil create -volname "iMenuPeek" -srcfolder "$STAGE" -ov -format UDZO "$DMG" >/dev/null
 codesign --force --sign "$DEVELOPER_ID_APP" --timestamp "$DMG"
 
 echo "==> Notarizing dmg"
@@ -79,15 +72,5 @@ xcrun stapler validate "$DMG"   # fatal: fail the release if the ticket isn't st
 spctl --assess --type open --context context:primary-signature -v "$DMG" || \
   echo "    ⚠️ spctl assessment was not 'accepted' — inspect before publishing"
 
-echo "==> Sparkle: signing update"
-if [[ -n "${SPARKLE_ED_PRIVATE_KEY:-}" ]]; then
-  SIG=$("$SPARKLE_BIN/sign_update" "$DMG" --ed-key-file - <<< "$SPARKLE_ED_PRIVATE_KEY")
-else
-  SIG=$("$SPARKLE_BIN/sign_update" "$DMG")   # reads private key from the login keychain
-fi
-echo "    $SIG"
-
 echo ""
 echo "✅ Release artifact: $DMG"
-echo "   Append this to appcast.xml's <item> (or run: $SPARKLE_BIN/generate_appcast <dir-of-dmgs>):"
-echo "   sparkle:shortVersionString=$VERSION  sparkle:version=$BUILD_NUMBER  $SIG"

@@ -12,6 +12,11 @@ final class LocalizedTextTests: XCTestCase {
         XCTAssertEqual(LocalizedText.resolve("Default", translations: ["zh-Hans": "简体"], language: "zh-TW"), "Default")
         XCTAssertEqual(LocalizedText.resolve("Default", translations: ["en": "  "], language: "en"), "Default")
         XCTAssertEqual(LocalizedText.resolve("Default", translations: translations, language: "fr"), "Default")
+        // iMenuPeek: português do Brasil
+        let pt = ["en": "Copy", "pt-BR": "Copiar"]
+        XCTAssertEqual(LocalizedText.resolve("Default", translations: pt, language: "pt-BR"), "Copiar")
+        XCTAssertEqual(LocalizedText.resolve("Default", translations: pt, language: "pt_BR"), "Copiar")
+        XCTAssertEqual(LocalizedText.resolve("Default", translations: ["pt": "Copiar"], language: "pt-BR"), "Copiar")
     }
     func testManifestTranslationsRoundTripAndLegacyStillDecodes() throws {
         let manifest = try PackManifest.decode(Data(#"{"schemaVersion":1,"name":"Default pack","localizedNames":{"en":"Tools","zh-Hans":"工具"},"localizedDescriptions":{"zh-Hans":"说明"},"actions":[{"id":"a","title":"Default action","script":"a.zsh","localizedTitles":{"en":"Copy","zh-Hans":"复制"}}]}"#.utf8))

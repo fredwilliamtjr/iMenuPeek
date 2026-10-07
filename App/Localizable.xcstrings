@@ -9,6 +9,12 @@
             "value": "App Bundle ID"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ID do pacote do app"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -23,6 +29,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cancel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
         "zh-Hans": {
@@ -41,6 +53,12 @@
             "value": "Choose…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolher…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -55,6 +73,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Choose App…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolher app…"
           }
         },
         "zh-Hans": {
@@ -73,6 +97,12 @@
             "value": "Delete…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -87,6 +117,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Delete “%@”?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar “%@”?"
           }
         },
         "zh-Hans": {
@@ -105,6 +141,12 @@
             "value": "This action will be removed from the context menu. This cannot be undone. The script file will not be deleted."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta ação será removida do menu de contexto. Não é possível desfazer. O arquivo de script não será apagado."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -119,6 +161,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Delete"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar"
           }
         },
         "zh-Hans": {
@@ -137,6 +185,12 @@
             "value": "Delete preset “%@”?"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apagar a predefinição “%@”?"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -151,6 +205,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This preset will be removed from the context menu; the script file is kept and can be recovered later via \"General › Restore Factory Presets\"."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta predefinição será removida do menu de contexto; o arquivo de script é mantido e pode ser recuperado depois em \"Geral › Restaurar predefinições de fábrica\"."
           }
         },
         "zh-Hans": {
@@ -169,6 +229,12 @@
             "value": "Fixed items"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itens fixos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -183,6 +249,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Separate items with commas."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Separe os itens com vírgulas."
           }
         },
         "zh-Hans": {
@@ -201,6 +273,12 @@
             "value": "Icon"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ícone"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -215,6 +293,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Run with zsh"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar com zsh"
           }
         },
         "zh-Hans": {
@@ -233,6 +317,12 @@
             "value": "List directory"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listar diretório"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -246,13 +336,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Relative paths are based on the MenuMate data directory, e.g. Templates"
+            "value": "Relative paths are based on the iMenuPeek data directory, e.g. Templates"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caminhos relativos partem do diretório de dados do iMenuPeek, ex.: Templates"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "相对路径基于 MenuMate 数据目录,如 Templates"
+            "value": "相对路径基于 iMenuPeek 数据目录,如 Templates"
           }
         }
       }
@@ -263,6 +359,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Menu title"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título no menu"
           }
         },
         "zh-Hans": {
@@ -281,6 +383,12 @@
             "value": "Open script in editor"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir script no editor"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -294,13 +402,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Submenu \"MenuMate ▸\""
+            "value": "Submenu \"iMenuPeek ▸\""
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Submenu \"iMenuPeek ▸\""
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "子菜单「MenuMate ▸」"
+            "value": "子菜单「iMenuPeek ▸」"
           }
         }
       }
@@ -308,6 +422,12 @@
     "editor.placeSubmenuShort": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Submenu"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Submenu"
@@ -329,6 +449,12 @@
             "value": "Menu top level"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nível superior do menu"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -343,6 +469,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Top level"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nível superior"
           }
         },
         "zh-Hans": {
@@ -361,6 +493,12 @@
             "value": "Placement"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posição"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -375,6 +513,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Preset"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Predefinição"
           }
         },
         "zh-Hans": {
@@ -393,6 +537,12 @@
             "value": "Restore this preset…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar esta predefinição…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -407,6 +557,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Restrict types"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restringir tipos"
           }
         },
         "zh-Hans": {
@@ -425,6 +581,12 @@
             "value": "Custom UTIs, separated by commas. Leave empty for all types."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UTIs personalizados, separados por vírgulas. Deixe vazio para todos os tipos."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -441,6 +603,12 @@
             "value": "Script path"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caminho do script"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -454,13 +622,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Relative paths are based on the MenuMate data directory"
+            "value": "Relative paths are based on the iMenuPeek data directory"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caminhos relativos partem do diretório de dados do iMenuPeek"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "相对路径基于 MenuMate 数据目录"
+            "value": "相对路径基于 iMenuPeek 数据目录"
           }
         }
       }
@@ -471,6 +645,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "sec"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "s"
           }
         },
         "zh-Hans": {
@@ -489,6 +669,12 @@
             "value": "Submenu expansion"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expansão do submenu"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -503,6 +689,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ · Custom action"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · Ação personalizada"
           }
         },
         "zh-Hans": {
@@ -521,6 +713,12 @@
             "value": "%@ · Factory preset"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · Predefinição de fábrica"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -535,6 +733,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Applies to"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplica-se a"
           }
         },
         "zh-Hans": {
@@ -553,6 +757,12 @@
             "value": "Folder background"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fundo da pasta"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -567,6 +777,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Files and folders"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos e pastas"
           }
         },
         "zh-Hans": {
@@ -585,6 +801,12 @@
             "value": "Files only"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Somente arquivos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -599,6 +821,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Folders only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Somente pastas"
           }
         },
         "zh-Hans": {
@@ -617,6 +845,12 @@
             "value": "Timeout"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo limite"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -631,6 +865,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Type"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo"
           }
         },
         "zh-Hans": {
@@ -649,6 +889,12 @@
             "value": "Inline script"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Script embutido"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -663,6 +909,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Open with app"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir com app"
           }
         },
         "zh-Hans": {
@@ -681,6 +933,12 @@
             "value": "Script file"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivo de script"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -695,6 +953,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Untitled action"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ação sem título"
           }
         },
         "zh-Hans": {
@@ -713,6 +977,12 @@
             "value": "Directory listing"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listagem de diretório"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -727,6 +997,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fixed list"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lista fixa"
           }
         },
         "zh-Hans": {
@@ -745,6 +1021,12 @@
             "value": "None"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -759,6 +1041,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Clear"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar"
           }
         },
         "zh-Hans": {
@@ -777,6 +1065,12 @@
             "value": "No execution records yet"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma execução registrada ainda"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -791,6 +1085,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Keeps the most recent 50 entries"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantém os 50 registros mais recentes"
           }
         },
         "zh-Hans": {
@@ -809,6 +1109,12 @@
             "value": "Cancel"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -823,6 +1129,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Custom…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personalizado…"
           }
         },
         "zh-Hans": {
@@ -841,6 +1153,12 @@
             "value": "Default Editor"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editor padrão"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -855,6 +1173,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Default Terminal"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminal padrão"
           }
         },
         "zh-Hans": {
@@ -873,6 +1197,12 @@
             "value": "External Tools"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ferramentas externas"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -887,6 +1217,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "VS Code (or system default)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VS Code (ou padrão do sistema)"
           }
         },
         "zh-Hans": {
@@ -905,6 +1241,12 @@
             "value": "System Terminal"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminal do sistema"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -919,6 +1261,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Follow Default (%@)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar o padrão (%@)"
           }
         },
         "zh-Hans": {
@@ -937,6 +1285,12 @@
             "value": "Launch at Login"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ao iniciar sessão"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -951,6 +1305,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Maintenance"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manutenção"
           }
         },
         "zh-Hans": {
@@ -969,6 +1329,12 @@
             "value": "Open in Finder"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir no Finder"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -983,6 +1349,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Re-run"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar de novo"
           }
         },
         "zh-Hans": {
@@ -1001,6 +1373,12 @@
             "value": "Re-run First-Time Setup"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refazer configuração inicial"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1015,6 +1393,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Restore…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar…"
           }
         },
         "zh-Hans": {
@@ -1033,6 +1417,12 @@
             "value": "Restore Factory Presets?"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar predefinições de fábrica?"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1047,6 +1437,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This will overwrite your changes to all preset scripts. Custom actions and extension packs are unaffected. "
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suas alterações em todos os scripts predefinidos serão sobrescritas. Ações personalizadas e pacotes de extensão não são afetados. "
           }
         },
         "zh-Hans": {
@@ -1065,6 +1461,12 @@
             "value": "This action cannot be undone."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não é possível desfazer esta ação."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1079,6 +1481,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Restore Factory Presets"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar predefinições de fábrica"
           }
         },
         "zh-Hans": {
@@ -1097,6 +1505,12 @@
             "value": "Overwrites your changes to all preset scripts"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sobrescreve suas alterações em todos os scripts predefinidos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1108,6 +1522,12 @@
     "general.scripts": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scripts"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Scripts"
@@ -1129,6 +1549,12 @@
             "value": "Scripts Folder"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta de scripts"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1143,6 +1569,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Templates Folder"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta de modelos"
           }
         },
         "zh-Hans": {
@@ -1161,6 +1593,12 @@
             "value": "Template source for the \"New File\" action"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Origem dos modelos da ação \"Novo arquivo\""
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1174,13 +1612,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "MenuMate %@"
+            "value": "iMenuPeek %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iMenuPeek %@"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "MenuMate %@"
+            "value": "iMenuPeek %@"
           }
         }
       }
@@ -1191,6 +1635,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Color"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cor"
           }
         },
         "zh-Hans": {
@@ -1209,6 +1659,12 @@
             "value": "Custom image"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagem personalizada"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1223,6 +1679,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Currently using a custom image · Pick a symbol below to switch back"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usando uma imagem personalizada · Escolha um símbolo abaixo para voltar"
           }
         },
         "zh-Hans": {
@@ -1241,6 +1703,12 @@
             "value": "Icon"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ícone"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1255,6 +1723,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Import Image…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar imagem…"
           }
         },
         "zh-Hans": {
@@ -1273,6 +1747,12 @@
             "value": "Add Action…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ação…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1287,6 +1767,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hide only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só ocultar"
           }
         },
         "zh-Hans": {
@@ -1305,6 +1791,12 @@
             "value": "Preset"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Padrão"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1319,6 +1811,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No manageable services found"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum serviço gerenciável encontrado"
           }
         },
         "zh-Hans": {
@@ -1337,6 +1835,12 @@
             "value": "No third-party Finder extensions found"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma extensão de terceiros do Finder encontrada"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1353,6 +1857,12 @@
             "value": "All"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1366,13 +1876,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "MenuMate only"
+            "value": "iMenuPeek only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só iMenuPeek"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "仅 MenuMate"
+            "value": "仅 iMenuPeek"
           }
         }
       }
@@ -1383,6 +1899,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "System only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só sistema"
           }
         },
         "zh-Hans": {
@@ -1401,6 +1923,12 @@
             "value": "Show or hide; macOS controls the position."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrar ou ocultar; o macOS controla a posição."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1415,6 +1943,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Enable or disable the entire extension."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ativar ou desativar a extensão inteira."
           }
         },
         "zh-Hans": {
@@ -1433,6 +1967,12 @@
             "value": "Reorder · edit · enable/disable"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reordenar · editar · ativar/desativar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1447,6 +1987,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hide only (position set by system)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só ocultar (posição definida pelo sistema)"
           }
         },
         "zh-Hans": {
@@ -1465,6 +2011,12 @@
             "value": "Toggle only (contents not previewable)"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só ativar/desativar (conteúdo sem pré-visualização)"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1479,6 +2031,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "New Action"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nova ação"
           }
         },
         "zh-Hans": {
@@ -1497,6 +2055,12 @@
             "value": "Pack"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacote"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1511,6 +2075,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Select an item in the preview to view / edit"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selecione um item na pré-visualização para ver / editar"
           }
         },
         "zh-Hans": {
@@ -1529,6 +2099,12 @@
             "value": "Refresh"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1543,6 +2119,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Restart Finder to apply"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reiniciar o Finder para aplicar"
           }
         },
         "zh-Hans": {
@@ -1561,6 +2143,12 @@
             "value": "Restore pbs backup…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar backup do pbs…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1575,6 +2163,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "MENUMATE · TOP LEVEL"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IMENUPEEK · NÍVEL SUPERIOR"
           }
         },
         "zh-Hans": {
@@ -1593,6 +2187,12 @@
             "value": "Provided by Other Extensions"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fornecidos por outras extensões"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1607,6 +2207,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Quick Actions & Services"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ações Rápidas e Serviços"
           }
         },
         "zh-Hans": {
@@ -1625,6 +2231,12 @@
             "value": "Entire context menu"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu de contexto completo"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1639,6 +2251,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Simulated right-click target"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alvo simulado do botão direito"
           }
         },
         "zh-Hans": {
@@ -1657,6 +2275,12 @@
             "value": "Empty area"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Área vazia"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1671,6 +2295,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "File"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivo"
           }
         },
         "zh-Hans": {
@@ -1689,6 +2319,12 @@
             "value": "Folder"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1703,6 +2339,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Image"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagem"
           }
         },
         "zh-Hans": {
@@ -1721,6 +2363,12 @@
             "value": "Open · Get Info · Rename"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir · Obter Informações · Renomear"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1735,6 +2383,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Untitled Action"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ação sem título"
           }
         },
         "zh-Hans": {
@@ -1753,6 +2407,12 @@
             "value": "Recent Runs"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Execuções recentes"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1766,13 +2426,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Open MenuMate Settings…"
+            "value": "Open iMenuPeek Settings…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ajustes do iMenuPeek…"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "打开 MenuMate 设置…"
+            "value": "打开 iMenuPeek 设置…"
           }
         }
       }
@@ -1782,13 +2448,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit MenuMate"
+            "value": "Quit iMenuPeek"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Encerrar iMenuPeek"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "退出 MenuMate"
+            "value": "退出 iMenuPeek"
           }
         }
       }
@@ -1799,6 +2471,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Recent Runs"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Execuções recentes"
           }
         },
         "zh-Hans": {
@@ -1817,6 +2495,12 @@
             "value": "Restart Finder"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reiniciar o Finder"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1830,13 +2514,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "MenuMate Settings"
+            "value": "iMenuPeek Settings"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes do iMenuPeek"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "MenuMate 设置"
+            "value": "iMenuPeek 设置"
           }
         }
       }
@@ -1847,6 +2537,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ failed"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ falhou"
           }
         },
         "zh-Hans": {
@@ -1865,6 +2561,12 @@
             "value": "Known dead zones: /Applications, iCloud Drive, and File Provider managed folders"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pontos cegos conhecidos: /Applications, iCloud Drive e pastas gerenciadas pelo File Provider"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1879,6 +2581,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "└ Finder does not load third-party extensions in these folders — a system limitation"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "└ O Finder não carrega extensões de terceiros nessas pastas — limitação do sistema"
           }
         },
         "zh-Hans": {
@@ -1897,6 +2605,12 @@
             "value": "Finder extension enabled"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão do Finder ativada"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1911,6 +2625,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Finder extension not yet enabled"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão do Finder ainda não ativada"
           }
         },
         "zh-Hans": {
@@ -1929,6 +2649,12 @@
             "value": "Extension not registered (run the main app once first)"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão não registrada (abra o app principal uma vez antes)"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1942,13 +2668,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Extension registered · election status %@"
+            "value": "Extension registered · %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão registrada · %@"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "扩展已注册 · 选举状态 %@"
+            "value": "扩展已注册 · %@"
           }
         }
       }
@@ -1959,6 +2691,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Still no menu? Check whether an MDM configuration profile has disabled the extension point"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainda sem menu? Verifique se um perfil de configuração MDM desativou o ponto de extensão"
           }
         },
         "zh-Hans": {
@@ -1977,6 +2715,12 @@
             "value": "└ System Settings › Privacy & Security › Profiles, or contact your IT administrator"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "└ Ajustes do Sistema › Privacidade e Segurança › Perfis, ou fale com o administrador de TI"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -1991,6 +2735,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Extension registered · election status %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão registrada · estado de eleição %@"
           }
         },
         "zh-Hans": {
@@ -2009,6 +2759,12 @@
             "value": "Done"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2023,6 +2779,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Next"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avançar"
           }
         },
         "zh-Hans": {
@@ -2041,6 +2803,12 @@
             "value": "Back"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voltar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2055,6 +2823,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Skip"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pular"
           }
         },
         "zh-Hans": {
@@ -2073,6 +2847,12 @@
             "value": "· Auto-checks every second"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "· Verifica automaticamente a cada segundo"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2087,6 +2867,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Extension detected as enabled"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão detectada como ativada"
           }
         },
         "zh-Hans": {
@@ -2105,6 +2891,12 @@
             "value": "Extension not yet detected"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão ainda não detectada"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2119,6 +2911,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Open System Settings to Enable"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Ajustes do Sistema para ativar"
           }
         },
         "zh-Hans": {
@@ -2137,6 +2935,12 @@
             "value": "System Settings › Login Items & Extensions screenshot"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Captura de Ajustes do Sistema › Itens de Início e Extensões"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2150,13 +2954,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Enable MenuMate in System Settings to show its Finder menu."
+            "value": "Enable iMenuPeek in System Settings to show its Finder menu."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ative o iMenuPeek nos Ajustes do Sistema para exibir o menu dele no Finder."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在系统设置中启用 MenuMate，显示 Finder 右键菜单。"
+            "value": "在系统设置中启用 iMenuPeek，显示 Finder 右键菜单。"
           }
         }
       }
@@ -2167,6 +2977,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Enable Finder Extension"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ativar extensão do Finder"
           }
         },
         "zh-Hans": {
@@ -2185,6 +3001,12 @@
             "value": "You can change this anytime in General"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Você pode mudar isso a qualquer momento em Geral"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2198,13 +3020,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Launch MenuMate at login"
+            "value": "Launch iMenuPeek at login"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir o iMenuPeek ao iniciar sessão"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "登录时启动 MenuMate"
+            "value": "登录时启动 iMenuPeek"
           }
         }
       }
@@ -2214,13 +3042,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start MenuMate automatically when you log in."
+            "value": "Start iMenuPeek automatically when you log in."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra o iMenuPeek automaticamente ao iniciar sessão."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "登录后自动运行 MenuMate。"
+            "value": "登录后自动运行 iMenuPeek。"
           }
         }
       }
@@ -2233,42 +3067,16 @@
             "value": "Launch at Login"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir ao iniciar sessão"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "登录时启动"
-          }
-        }
-      }
-    },
-    "onboarding.step3.accessibility.desc": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Simulate ⌘↑ (Go Up) in upload/open dialogs (works with the item above)"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "在上传/打开对话框里模拟 ⌘↑ 上一层(配合上一项)"
-          }
-        }
-      }
-    },
-    "onboarding.step3.accessibility.title": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accessibility"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "辅助功能"
           }
         }
       }
@@ -2278,13 +3086,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "\"Go to Parent/Enclosing Folder\" navigates in Finder and in upload/open dialogs"
+            "value": "\"Go to Parent/Enclosing Folder\" navigates in the Finder window"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"Ir para a pasta superior\" navega na janela do Finder"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "「前往上一层/所在目录」在 Finder 与上传/打开对话框里导航"
+            "value": "「前往上一层/所在目录」在 Finder 窗口内导航"
           }
         }
       }
@@ -2294,13 +3108,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Automation · Finder and System Events"
+            "value": "Automation · Finder"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automação · Finder"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "自动化 · Finder 与 System Events"
+            "value": "自动化 · Finder"
           }
         }
       }
@@ -2311,6 +3131,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Grant All Permissions"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conceder todas as permissões"
           }
         },
         "zh-Hans": {
@@ -2329,6 +3155,12 @@
             "value": "Alert you when a script fails"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisa quando um script falhar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2345,26 +3177,16 @@
             "value": "Notifications"
           }
         },
-        "zh-Hans": {
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "通知"
-          }
-        }
-      }
-    },
-    "onboarding.step3.openAccessibility": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open Accessibility Settings"
+            "value": "Notificações"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "打开辅助功能设置"
+            "value": "通知"
           }
         }
       }
@@ -2375,6 +3197,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Allow notifications and Finder navigation, or skip this step."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permita notificações e a navegação no Finder, ou pule esta etapa."
           }
         },
         "zh-Hans": {
@@ -2393,6 +3221,12 @@
             "value": "Grant Permissions"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conceder permissões"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2407,6 +3241,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Copy Diagnostics"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar diagnóstico"
           }
         },
         "zh-Hans": {
@@ -2425,6 +3265,12 @@
             "value": "Check whether the Finder extension is blocked by a system policy (such as MDM)."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifique se a extensão do Finder está bloqueada por uma política do sistema (como MDM)."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2441,6 +3287,12 @@
             "value": "Environment Check"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificação do ambiente"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2454,13 +3306,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Welcome to MenuMate"
+            "value": "Welcome to iMenuPeek"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bem-vindo ao iMenuPeek"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "欢迎使用 MenuMate"
+            "value": "欢迎使用 iMenuPeek"
           }
         }
       }
@@ -2471,6 +3329,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld copies"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld cópias"
           }
         },
         "zh-Hans": {
@@ -2489,6 +3353,12 @@
             "value": "In Use"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Em uso"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2503,6 +3373,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No duplicates found yet. Click \"Scan for Duplicates\" to start."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma duplicata encontrada ainda. Clique em \"Procurar duplicatas\" para começar."
           }
         },
         "zh-Hans": {
@@ -2521,6 +3397,12 @@
             "value": "Duplicates in the \"Open With\" menu usually come from multiple disk copies of the same app. After scanning, you can unregister each copy individually; the copy currently in use is protected."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duplicatas no menu \"Abrir com\" geralmente vêm de várias cópias do mesmo app no disco. Após a busca, você pode remover o registro de cada cópia individualmente; a cópia em uso fica protegida."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2535,6 +3417,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Scan for Duplicates"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurar duplicatas"
           }
         },
         "zh-Hans": {
@@ -2553,6 +3441,12 @@
             "value": "Scanning… Searching for duplicate apps with Spotlight"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procurando… Buscando apps duplicados com o Spotlight"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2567,6 +3461,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Unregister"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remover registro"
           }
         },
         "zh-Hans": {
@@ -2585,6 +3485,12 @@
             "value": "Unregister & Move to Trash"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remover registro e mover para a Lixeira"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2599,6 +3505,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This system doesn't support unregistering items individually; only rebuilding the entire LaunchServices database is possible."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este sistema não permite remover o registro de itens individualmente; só é possível reconstruir todo o banco de dados do LaunchServices."
           }
         },
         "zh-Hans": {
@@ -2617,6 +3529,12 @@
             "value": "%lld actions · commit %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld ações · commit %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2631,6 +3549,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld actions · %lld script files"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld ações · %lld arquivos de script"
           }
         },
         "zh-Hans": {
@@ -2649,6 +3573,12 @@
             "value": "Apply Update"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplicar atualização"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2663,6 +3593,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Back"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voltar"
           }
         },
         "zh-Hans": {
@@ -2681,6 +3617,12 @@
             "value": "Cancel"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2695,6 +3637,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cloning…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clonando…"
           }
         },
         "zh-Hans": {
@@ -2713,6 +3661,12 @@
             "value": "Cloning…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clonando…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2727,6 +3681,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Close"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fechar"
           }
         },
         "zh-Hans": {
@@ -2745,6 +3705,12 @@
             "value": "All actions are disabled by default after import. You need to enable them one by one in the Packs list before they appear in the context menu."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas as ações ficam desativadas por padrão após a importação. Ative-as uma a uma na lista de Pacotes para que apareçam no menu de contexto."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2759,6 +3725,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Confirm Import"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirmar importação"
           }
         },
         "zh-Hans": {
@@ -2777,6 +3749,12 @@
             "value": "Continue"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2791,6 +3769,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Disabled by default"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desativada por padrão"
           }
         },
         "zh-Hans": {
@@ -2809,6 +3793,12 @@
             "value": "Added"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2823,6 +3813,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Removed"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Removido"
           }
         },
         "zh-Hans": {
@@ -2841,6 +3837,12 @@
             "value": "Import Failed"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha na importação"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2855,6 +3857,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Import"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar"
           }
         },
         "zh-Hans": {
@@ -2873,6 +3881,12 @@
             "value": "Manifest updated"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manifesto atualizado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2887,6 +3901,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "New action "
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nova ação "
           }
         },
         "zh-Hans": {
@@ -2905,6 +3925,12 @@
             "value": "%lld new actions"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld ações novas"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2921,6 +3947,12 @@
             "value": "Next"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avançar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2932,6 +3964,12 @@
     "packImport.placementSubmenu": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Submenu"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Submenu"
@@ -2953,6 +3991,12 @@
             "value": "Top level"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nível superior"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2967,6 +4011,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Retry"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar de novo"
           }
         },
         "zh-Hans": {
@@ -2985,6 +4035,12 @@
             "value": "Review Scripts — %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisar scripts — %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -2999,6 +4055,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Scripts from this repository will run with your user privileges. Review each one before importing and make sure there are no suspicious commands."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os scripts deste repositório serão executados com os privilégios do seu usuário. Revise cada um antes de importar e confirme que não há comandos suspeitos."
           }
         },
         "zh-Hans": {
@@ -3017,6 +4079,12 @@
             "value": "// Failed to read script contents"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "// Falha ao ler o conteúdo do script"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3031,6 +4099,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "zsh · read-only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "zsh · somente leitura"
           }
         },
         "zh-Hans": {
@@ -3049,6 +4123,12 @@
             "value": "Import Pack"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar pacote"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3065,6 +4145,12 @@
             "value": "Step %lld / 3"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etapa %lld / 3"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3076,6 +4162,12 @@
     "packImport.summarySeparator": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ", "
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": ", "
@@ -3097,6 +4189,12 @@
             "value": "Folder background"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fundo da pasta"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3111,6 +4209,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Files and folders"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos e pastas"
           }
         },
         "zh-Hans": {
@@ -3129,6 +4233,12 @@
             "value": "Files only"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Somente arquivos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3143,6 +4253,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Folders only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Somente pastas"
           }
         },
         "zh-Hans": {
@@ -3161,6 +4277,12 @@
             "value": "Cloning the new version and comparing differences…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clonando a nova versão e comparando diferenças…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3177,6 +4299,12 @@
             "value": "Takes effect only after you confirm the changes"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só entra em vigor depois que você confirmar as alterações"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3188,6 +4316,12 @@
     "packImport.updateSummaryPlain": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@."
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "%@."
@@ -3209,6 +4343,12 @@
             "value": "%@. New actions are disabled by default."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@. Ações novas ficam desativadas por padrão."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3223,6 +4363,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Update %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar %@"
           }
         },
         "zh-Hans": {
@@ -3241,6 +4387,12 @@
             "value": "HTTPS and SSH Git URLs are supported."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URLs Git HTTPS e SSH são aceitas."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3255,6 +4407,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Paste a git repository URL, or owner/repo shorthand:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cole a URL de um repositório git ou o atalho dono/repo:"
           }
         },
         "zh-Hans": {
@@ -3273,6 +4431,12 @@
             "value": "Viewed %lld / %lld · view all to continue"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vistos %lld / %lld · veja todos para continuar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3287,6 +4451,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "zsh · read-only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "zsh · somente leitura"
           }
         },
         "zh-Hans": {
@@ -3305,6 +4475,12 @@
             "value": "Browse Community"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explorar comunidade"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3319,6 +4495,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cancel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
         "zh-Hans": {
@@ -3337,6 +4519,12 @@
             "value": "Check All for Updates"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar atualizações de todos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3351,6 +4539,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Checking…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificando…"
           }
         },
         "zh-Hans": {
@@ -3369,6 +4563,12 @@
             "value": "Browse community packs or import a Git repository."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explore os pacotes da comunidade ou importe um repositório Git."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3383,6 +4583,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No packs yet"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum pacote ainda"
           }
         },
         "zh-Hans": {
@@ -3401,6 +4607,12 @@
             "value": "%lld/%lld enabled"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld ativadas"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3415,6 +4627,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "git operation failed: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "falha na operação do git: %@"
           }
         },
         "zh-Hans": {
@@ -3433,6 +4651,12 @@
             "value": "manifest.json is invalid: %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "manifest.json é inválido: %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3447,6 +4671,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "manifest.json is missing from the repository root"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "manifest.json não está na raiz do repositório"
           }
         },
         "zh-Hans": {
@@ -3465,6 +4695,12 @@
             "value": "The local pack directory is not a valid git repository; cannot check for updates"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O diretório local do pacote não é um repositório git válido; não é possível buscar atualizações"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3479,6 +4715,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Installed pack not found: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacote instalado não encontrado: %@"
           }
         },
         "zh-Hans": {
@@ -3497,6 +4739,12 @@
             "value": "Last checked: %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última verificação: %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3511,6 +4759,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Import Pack…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar pacote…"
           }
         },
         "zh-Hans": {
@@ -3529,6 +4783,12 @@
             "value": "MMM d HH:mm"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "d MMM HH:mm"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3543,6 +4803,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "'Today' HH:mm"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "'Hoje' HH:mm"
           }
         },
         "zh-Hans": {
@@ -3561,6 +4827,12 @@
             "value": "Never checked"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nunca verificado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3575,6 +4847,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Open Repository"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir repositório"
           }
         },
         "zh-Hans": {
@@ -3593,6 +4871,12 @@
             "value": "// Failed to read script: %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "// Falha ao ler o script: %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3607,6 +4891,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Uninstall"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar"
           }
         },
         "zh-Hans": {
@@ -3625,6 +4915,12 @@
             "value": "This removes all %lld actions from this pack and deletes the local clone. This cannot be undone."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isso remove todas as %lld ações deste pacote e apaga o clone local. Não é possível desfazer."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3639,6 +4935,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Uninstall pack “%@”?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar o pacote “%@”?"
           }
         },
         "zh-Hans": {
@@ -3657,6 +4959,12 @@
             "value": "Uninstall…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desinstalar…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3671,6 +4979,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Update available"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualização disponível"
           }
         },
         "zh-Hans": {
@@ -3689,6 +5003,12 @@
             "value": "Update…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3703,6 +5023,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "View Script"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver script"
           }
         },
         "zh-Hans": {
@@ -3721,6 +5047,12 @@
             "value": "Control level: hide only"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nível de controle: só ocultar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3735,6 +5067,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Control level: toggle only · content not previewable"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nível de controle: só ativar/desativar · conteúdo sem pré-visualização"
           }
         },
         "zh-Hans": {
@@ -3753,6 +5091,12 @@
             "value": "Editable"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editável"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3767,6 +5111,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This extension is managed by its host app or the system; change it in System Settings."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta extensão é gerenciada pelo app que a fornece ou pelo sistema; altere-a nos Ajustes do Sistema."
           }
         },
         "zh-Hans": {
@@ -3785,6 +5135,12 @@
             "value": "Pack action"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ação de pacote"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3799,6 +5155,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "zsh · read-only"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "zsh · somente leitura"
           }
         },
         "zh-Hans": {
@@ -3817,6 +5179,12 @@
             "value": "Manage in System Settings"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerenciar nos Ajustes do Sistema"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3831,6 +5199,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Provided by %@. Only the entire extension can be enabled or disabled."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fornecido por %@. Só é possível ativar ou desativar a extensão inteira."
           }
         },
         "zh-Hans": {
@@ -3849,6 +5223,12 @@
             "value": "Open repo home"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir página do repositório"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3863,6 +5243,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Scripts and matching rules are managed by the pack."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os scripts e as regras de correspondência são gerenciados pelo pacote."
           }
         },
         "zh-Hans": {
@@ -3881,6 +5267,12 @@
             "value": "Restrict UTI"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restringir UTI"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3895,6 +5287,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "// Failed to read script"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "// Falha ao ler o script"
           }
         },
         "zh-Hans": {
@@ -3913,6 +5311,12 @@
             "value": "Shortcuts-based Quick Actions can only be hidden, not disabled."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ações Rápidas baseadas em Atalhos só podem ser ocultadas, não desativadas."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3927,6 +5331,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "System service"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serviço do sistema"
           }
         },
         "zh-Hans": {
@@ -3945,6 +5355,12 @@
             "value": "Show or hide this service. Its name and position are controlled by macOS."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostre ou oculte este serviço. O nome e a posição são controlados pelo macOS."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3959,6 +5375,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Applies to"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplica-se a"
           }
         },
         "zh-Hans": {
@@ -3977,6 +5399,12 @@
             "value": "Third-party extension"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensão de terceiros"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -3988,6 +5416,12 @@
     "panel.typeApplication": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "Apps"
@@ -4009,6 +5443,12 @@
             "value": "Archives"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivos compactados"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4023,6 +5463,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Audio"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Áudio"
           }
         },
         "zh-Hans": {
@@ -4041,6 +5487,12 @@
             "value": "Images"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagens"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4052,6 +5504,12 @@
     "panel.typePDF": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "PDF"
@@ -4073,6 +5531,12 @@
             "value": "Source code"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código-fonte"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4087,6 +5551,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Text"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto"
           }
         },
         "zh-Hans": {
@@ -4105,6 +5575,12 @@
             "value": "Videos"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4119,6 +5595,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "(unrestricted)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(sem restrição)"
           }
         },
         "zh-Hans": {
@@ -4137,6 +5619,12 @@
             "value": "Workflow"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fluxo de trabalho"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4151,6 +5639,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "The config file couldn't be read; using defaults temporarily (your file was not overwritten): %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível ler o arquivo de configuração; usando os padrões temporariamente (seu arquivo não foi sobrescrito): %@"
           }
         },
         "zh-Hans": {
@@ -4169,6 +5663,12 @@
             "value": "pbs -flush failed: %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha no pbs -flush: %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4183,6 +5683,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Failed to restore pbs.plist backup: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falha ao restaurar o backup do pbs.plist: %@"
           }
         },
         "zh-Hans": {
@@ -4201,6 +5707,12 @@
             "value": "Timed out (%llds)"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo esgotado (%llds)"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4215,6 +5727,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Context Menu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu de contexto"
           }
         },
         "zh-Hans": {
@@ -4233,6 +5751,12 @@
             "value": "General"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geral"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4247,6 +5771,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Open With"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir com"
           }
         },
         "zh-Hans": {
@@ -4265,26 +5795,16 @@
             "value": "Packs"
           }
         },
-        "zh-Hans": {
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "扩展包"
-          }
-        }
-      }
-    },
-    "menubar.checkForUpdates": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Check for Updates…"
+            "value": "Pacotes"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "检查更新…"
+            "value": "扩展包"
           }
         }
       }
@@ -4295,6 +5815,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Discover Community Packs"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descobrir pacotes da comunidade"
           }
         },
         "zh-Hans": {
@@ -4313,6 +5839,12 @@
             "value": "Refresh"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4327,6 +5859,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Scanning GitHub…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquisando no GitHub…"
           }
         },
         "zh-Hans": {
@@ -4345,6 +5883,12 @@
             "value": "Couldn't load"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível carregar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4359,6 +5903,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Retry"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar de novo"
           }
         },
         "zh-Hans": {
@@ -4377,6 +5927,12 @@
             "value": "View in browser"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver no navegador"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4391,6 +5947,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No repositories tagged \"menumate-pack\" found yet. Be the first — add the topic to your pack repo!"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum repositório com o tópico \"menumate-pack\" encontrado ainda. Seja o primeiro — adicione o tópico ao repositório do seu pacote!"
           }
         },
         "zh-Hans": {
@@ -4409,6 +5971,12 @@
             "value": "Installed"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4423,6 +5991,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Import"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar"
           }
         },
         "zh-Hans": {
@@ -4441,6 +6015,12 @@
             "value": "Close"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fechar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4455,6 +6035,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Selection count"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quantidade selecionada"
           }
         },
         "zh-Hans": {
@@ -4473,6 +6059,12 @@
             "value": "Leave empty for no limit."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deixe vazio para não limitar."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4487,6 +6079,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "min"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "mín."
           }
         },
         "zh-Hans": {
@@ -4505,6 +6103,12 @@
             "value": "max"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "máx."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4519,6 +6123,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "any"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "qualquer"
           }
         },
         "zh-Hans": {
@@ -4537,6 +6147,12 @@
             "value": "%d undeclared file(s) — scripts may reference these. Review before installing."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d arquivo(s) não declarado(s) — os scripts podem usá-los. Revise antes de instalar."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4551,6 +6167,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "I've reviewed these undeclared files"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisei estes arquivos não declarados"
           }
         },
         "zh-Hans": {
@@ -4569,6 +6191,12 @@
             "value": "executable"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "executável"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4583,6 +6211,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "binary"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "binário"
           }
         },
         "zh-Hans": {
@@ -4601,6 +6235,12 @@
             "value": "symlink"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "link simbólico"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4615,6 +6255,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Extension packs"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pacotes de extensão"
           }
         },
         "zh-Hans": {
@@ -4633,6 +6279,12 @@
             "value": "Test Run"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar teste"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4647,6 +6299,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Running…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executando…"
           }
         },
         "zh-Hans": {
@@ -4665,6 +6323,12 @@
             "value": "Pick real target(s) — the action runs for REAL and may modify or delete them"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha alvo(s) real(is) — a ação roda DE VERDADE e pode alterá-los ou apagá-los"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4679,6 +6343,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Test Run Result"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado do teste"
           }
         },
         "zh-Hans": {
@@ -4697,6 +6367,12 @@
             "value": "Success (exit %d)"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sucesso (saída %d)"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4711,6 +6387,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Failed (exit %d)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falhou (saída %d)"
           }
         },
         "zh-Hans": {
@@ -4729,6 +6411,12 @@
             "value": "Timed out"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo esgotado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4743,6 +6431,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Variant"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Variante"
           }
         },
         "zh-Hans": {
@@ -4761,6 +6455,12 @@
             "value": "Output"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saída"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4775,6 +6475,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Errors"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erros"
           }
         },
         "zh-Hans": {
@@ -4793,6 +6499,12 @@
             "value": "Close"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fechar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4807,6 +6519,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "(no output)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(sem saída)"
           }
         },
         "zh-Hans": {
@@ -4825,6 +6543,12 @@
             "value": "No script to run yet"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainda não há script para executar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4839,6 +6563,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Enter positive integers with min no greater than max. Changes are saved after this is corrected."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Digite números inteiros positivos, com o mínimo não maior que o máximo. As alterações serão salvas após a correção."
           }
         },
         "zh-Hans": {
@@ -4857,6 +6587,12 @@
             "value": "Tidy up…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizar…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4871,6 +6607,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tidy up the right-click menu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizar o menu do botão direito"
           }
         },
         "zh-Hans": {
@@ -4889,6 +6631,12 @@
             "value": "Select services and extensions to hide."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selecione os serviços e extensões a ocultar."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4903,6 +6651,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Select all"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selecionar tudo"
           }
         },
         "zh-Hans": {
@@ -4921,6 +6675,12 @@
             "value": "Select none"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não selecionar nada"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4935,6 +6695,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Third-party app services (%d)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serviços de apps de terceiros (%d)"
           }
         },
         "zh-Hans": {
@@ -4953,6 +6719,12 @@
             "value": "Third-party Finder extensions (%d)"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extensões de terceiros do Finder (%d)"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4967,6 +6739,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Built-in system services (%d)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serviços nativos do sistema (%d)"
           }
         },
         "zh-Hans": {
@@ -4985,6 +6763,12 @@
             "value": "recommended"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "recomendado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -4999,6 +6783,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nothing to tidy up"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nada para organizar"
           }
         },
         "zh-Hans": {
@@ -5017,6 +6807,12 @@
             "value": "Restarts Finder to apply"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinicia o Finder para aplicar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5031,6 +6827,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tidy up (hide %d)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Organizar (ocultar %d)"
           }
         },
         "zh-Hans": {
@@ -5049,6 +6851,12 @@
             "value": "Cancel"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5063,6 +6871,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hid %d item(s)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d item(ns) ocultado(s)"
           }
         },
         "zh-Hans": {
@@ -5081,6 +6895,12 @@
             "value": "Undo"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desfazer"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5095,6 +6915,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Done"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
         "zh-Hans": {
@@ -5113,6 +6939,12 @@
             "value": "hide only"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "só ocultar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5127,6 +6959,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "rejected"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "recusado"
           }
         },
         "zh-Hans": {
@@ -5145,6 +6983,12 @@
             "value": "%d rejected by their app — open System Settings"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d recusado(s) pelo app — abra os Ajustes do Sistema"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5159,6 +7003,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Other sources"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outras origens"
           }
         },
         "zh-Hans": {
@@ -5177,6 +7027,12 @@
             "value": "Application Services"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serviços de apps"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5188,15 +7044,51 @@
     "menu.previewRealCount": {
       "localizations": {
         "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%d real items"
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld real item"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld real items"
+                }
+              }
+            }
+          }
+        },
+        "pt-BR": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld item real"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld itens reais"
+                }
+              }
+            }
           }
         },
         "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%d 个真实对象"
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 个真实对象"
+                }
+              }
+            }
           }
         }
       }
@@ -5207,6 +7099,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Examples"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exemplos"
           }
         },
         "zh-Hans": {
@@ -5225,6 +7123,12 @@
             "value": "Example file type"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo de arquivo de exemplo"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5236,15 +7140,51 @@
     "menu.previewExampleCount": {
       "localizations": {
         "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%d items"
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld item"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld items"
+                }
+              }
+            }
+          }
+        },
+        "pt-BR": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld item"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld itens"
+                }
+              }
+            }
           }
         },
         "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%d 个对象"
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 项"
+                }
+              }
+            }
           }
         }
       }
@@ -5255,6 +7195,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Preview real files…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pré-visualizar arquivos reais…"
           }
         },
         "zh-Hans": {
@@ -5273,6 +7219,12 @@
             "value": "Preview"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pré-visualizar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5286,13 +7238,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Choose files or folders, including mixed types. This only checks which MenuMate actions match; it does not run them."
+            "value": "Choose files or folders, including mixed types. This only checks which iMenuPeek actions match; it does not run them."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha arquivos ou pastas, inclusive de tipos mistos. Isso só verifica quais ações do iMenuPeek correspondem; elas não são executadas."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "可多选文件和文件夹，也可混选类型。这里只检查匹配的 MenuMate 动作，不会执行动作。"
+            "value": "可多选文件和文件夹，也可混选类型。这里只检查匹配的 iMenuPeek 动作，不会执行动作。"
           }
         }
       }
@@ -5303,6 +7261,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No items selected. Choose files to preview."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum item selecionado. Escolha arquivos para pré-visualizar."
           }
         },
         "zh-Hans": {
@@ -5321,6 +7285,12 @@
             "value": "An item is missing or unreadable. Choose it again or refresh the preview."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um item está ausente ou ilegível. Escolha-o de novo ou atualize a pré-visualização."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5335,6 +7305,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hidden for this selection: the object kind does not match this action."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oculta nesta seleção: o tipo de objeto não corresponde a esta ação."
           }
         },
         "zh-Hans": {
@@ -5353,6 +7329,12 @@
             "value": "Hidden for this selection: at least one item has a file type this action does not accept."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oculta nesta seleção: pelo menos um item tem um tipo de arquivo que esta ação não aceita."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5367,6 +7349,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hidden for this selection: select at least %d items."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oculta nesta seleção: selecione pelo menos %d itens."
           }
         },
         "zh-Hans": {
@@ -5385,6 +7373,12 @@
             "value": "Hidden for this selection: select at most %d items."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oculta nesta seleção: selecione no máximo %d itens."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5399,6 +7393,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No actions match this selection."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma ação corresponde a esta seleção."
           }
         },
         "zh-Hans": {
@@ -5417,6 +7417,12 @@
             "value": "Selected action · hidden for this selection"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ação selecionada · oculta nesta seleção"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5431,6 +7437,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This action matches, but is disabled. Enable it to show it in Finder."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta ação corresponde, mas está desativada. Ative-a para exibi-la no Finder."
           }
         },
         "zh-Hans": {
@@ -5449,6 +7461,12 @@
             "value": "Search actions, services, apps"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar ações, serviços, apps"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5463,6 +7481,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Clear search"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar busca"
           }
         },
         "zh-Hans": {
@@ -5481,6 +7505,12 @@
             "value": "Add action"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ação"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5495,6 +7525,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "More"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mais"
           }
         },
         "zh-Hans": {
@@ -5513,6 +7549,12 @@
             "value": "Execution settings"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Execução"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5527,6 +7569,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Advanced conditions and submenu"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Condições avançadas e submenu"
           }
         },
         "zh-Hans": {
@@ -5545,6 +7593,12 @@
             "value": "Restore this preset’s original script and settings? Your edits to this preset will be replaced."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar o script e os ajustes originais desta predefinição? Suas edições nela serão substituídas."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5559,6 +7613,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Test with temporary samples"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testar com amostras temporárias"
           }
         },
         "zh-Hans": {
@@ -5577,6 +7637,12 @@
             "value": "Each test uses generated samples and its own Data and Templates folders. Outputs are kept for inspection. This is not a sandbox: scripts still run with your user permissions."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada teste usa amostras geradas e pastas Data e Templates próprias. Os resultados são mantidos para inspeção. Não é uma sandbox: os scripts continuam rodando com as permissões do seu usuário."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5591,6 +7657,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sample type"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tipo de amostra"
           }
         },
         "zh-Hans": {
@@ -5609,6 +7681,12 @@
             "value": "Create samples"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Criar amostras"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5623,6 +7701,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Preparing samples…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparando amostras…"
           }
         },
         "zh-Hans": {
@@ -5641,6 +7725,12 @@
             "value": "Open folder"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir pasta"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5655,6 +7745,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Running…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executando…"
           }
         },
         "zh-Hans": {
@@ -5673,6 +7769,12 @@
             "value": "Run test"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar teste"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5687,6 +7789,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "The selected samples no longer match the action. Create samples again."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As amostras selecionadas não correspondem mais à ação. Crie as amostras de novo."
           }
         },
         "zh-Hans": {
@@ -5705,6 +7813,12 @@
             "value": "Choose options in the page. The script runs only after you submit."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha as opções na página. O script só é executado depois que você enviar."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5719,6 +7833,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Test mode: selected files and data are in the temporary workspace."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo de teste: os arquivos selecionados e os dados estão no espaço de trabalho temporário."
           }
         },
         "zh-Hans": {
@@ -5737,6 +7857,12 @@
             "value": "Unable to load the local action page."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível carregar a página local da ação."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5751,6 +7877,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Running. This window can be closed when execution finishes."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executando. Esta janela pode ser fechada quando a execução terminar."
           }
         },
         "zh-Hans": {
@@ -5769,6 +7901,12 @@
             "value": "Finished. See the result in the page."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concluído. Veja o resultado na página."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5783,6 +7921,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Invalid parameters: send a JSON object no larger than 64 KB."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parâmetros inválidos: envie um objeto JSON de até 64 KB."
           }
         },
         "zh-Hans": {
@@ -5801,6 +7945,12 @@
             "value": "Opens an options window when clicked"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre uma janela de opções ao clicar"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5815,6 +7965,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Action interface"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Interface da ação"
           }
         },
         "zh-Hans": {
@@ -5833,6 +7989,12 @@
             "value": "Use direct execution"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar execução direta"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5847,6 +8009,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Run directly"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Executar diretamente"
           }
         },
         "zh-Hans": {
@@ -5865,6 +8033,12 @@
             "value": "Choose HTML…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolher HTML…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5879,6 +8053,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Compress JPEG images"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir imagens JPEG"
           }
         },
         "zh-Hans": {
@@ -5897,6 +8077,12 @@
             "value": "Add interactive image action…"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ação interativa de imagem…"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5911,6 +8097,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Timeout must be 1–3600 seconds. Changes are not saved yet."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O tempo limite deve ser de 1 a 3600 segundos. As alterações ainda não foram salvas."
           }
         },
         "zh-Hans": {
@@ -5929,6 +8121,12 @@
             "value": "No matching actions."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma ação correspondente."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5943,6 +8141,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No matching services."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum serviço correspondente."
           }
         },
         "zh-Hans": {
@@ -5961,6 +8165,12 @@
             "value": "No matching extensions."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma extensão correspondente."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -5975,6 +8185,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "“%@” is already installed. Use Check for Updates to review and apply a new version."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” já está instalado. Use Buscar atualizações para revisar e aplicar uma nova versão."
           }
         },
         "zh-Hans": {
@@ -5993,6 +8209,12 @@
             "value": "%d file changes"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d arquivos alterados"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6007,6 +8229,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Search actions, files or output"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar ações, arquivos ou saída"
           }
         },
         "zh-Hans": {
@@ -6025,6 +8253,12 @@
             "value": "Execution result"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultado da execução"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6039,6 +8273,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "All"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos"
           }
         },
         "zh-Hans": {
@@ -6057,6 +8297,12 @@
             "value": "Failed"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com falha"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6071,6 +8317,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Succeeded"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com sucesso"
           }
         },
         "zh-Hans": {
@@ -6089,6 +8341,12 @@
             "value": "Timed out"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo esgotado"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6103,6 +8361,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "No executions match these filters."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma execução corresponde a estes filtros."
           }
         },
         "zh-Hans": {
@@ -6121,6 +8385,12 @@
             "value": "Reset filters"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redefinir filtros"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6135,6 +8405,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%d of %d records · latest 50 kept"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d de %d registros · mantidos os 50 mais recentes"
           }
         },
         "zh-Hans": {
@@ -6153,6 +8429,12 @@
             "value": "Clear execution history?"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar o histórico de execuções?"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6167,6 +8449,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This clears all saved records, including records hidden by filters. Your files and actions are not deleted."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isso apaga todos os registros salvos, inclusive os ocultos pelos filtros. Seus arquivos e ações não são apagados."
           }
         },
         "zh-Hans": {
@@ -6185,6 +8473,12 @@
             "value": "Clear all records"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar todos os registros"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6196,6 +8490,12 @@
     "execLog.duration": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%.2f s"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "%.2f s"
@@ -6217,6 +8517,12 @@
             "value": "Exit code: %d"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Código de saída: %d"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6231,6 +8537,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Option: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opção: %@"
           }
         },
         "zh-Hans": {
@@ -6249,6 +8561,12 @@
             "value": "Selected items: %d of %d shown"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Itens selecionados: %d de %d exibidos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6263,6 +8581,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Output (stdout)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saída (stdout)"
           }
         },
         "zh-Hans": {
@@ -6281,6 +8605,12 @@
             "value": "Error output (stderr)"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saída de erro (stderr)"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6295,6 +8625,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Details"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detalhes"
           }
         },
         "zh-Hans": {
@@ -6313,6 +8649,12 @@
             "value": "Copy details"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar detalhes"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6327,6 +8669,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Copied"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiado"
           }
         },
         "zh-Hans": {
@@ -6345,6 +8693,12 @@
             "value": "Output exceeds the history limit. Only the first 16,000 characters of each stream are saved."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A saída excede o limite do histórico. Só os primeiros 16.000 caracteres de cada fluxo são salvos."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6359,6 +8713,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Could not read previous history. The original file is preserved; new records remain in memory until history is cleared. %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível ler o histórico anterior. O arquivo original foi preservado; novos registros ficam na memória até o histórico ser limpo. %@"
           }
         },
         "zh-Hans": {
@@ -6377,6 +8737,12 @@
             "value": "Could not save execution history: %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível salvar o histórico de execuções: %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6391,6 +8757,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Default name"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome padrão"
           }
         },
         "zh-Hans": {
@@ -6409,6 +8781,12 @@
             "value": "Localized names"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nomes traduzidos"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6423,6 +8801,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Use default name"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar nome padrão"
           }
         },
         "zh-Hans": {
@@ -6441,6 +8825,12 @@
             "value": "English"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "English"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6449,9 +8839,37 @@
         }
       }
     },
+    "editor.languagePortuguese": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Portuguese (Brazil)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Português (Brasil)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "葡萄牙语（巴西）"
+          }
+        }
+      }
+    },
     "editor.languageChinese": {
       "localizations": {
         "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简体中文"
+          }
+        },
+        "pt-BR": {
           "stringUnit": {
             "state": "translated",
             "value": "简体中文"
@@ -6473,6 +8891,12 @@
             "value": "Has submenu"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tem submenu"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6487,6 +8911,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "This action has a submenu in Finder. Click the row here to edit its options under Advanced conditions and submenu."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta ação tem um submenu no Finder. Clique na linha aqui para editar as opções em Condições avançadas e submenu."
           }
         },
         "zh-Hans": {
@@ -6505,6 +8935,12 @@
             "value": "Changes were not saved. Please try again. %@"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "As alterações não foram salvas. Tente de novo. %@"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6519,6 +8955,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pack recovery must finish before actions can run."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A recuperação dos pacotes precisa terminar antes que as ações possam ser executadas."
           }
         },
         "zh-Hans": {
@@ -6537,6 +8979,12 @@
             "value": "Retry recovery"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar recuperar de novo"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6551,6 +8999,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Could not read installed packs. The original file was preserved. %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível ler os pacotes instalados. O arquivo original foi preservado. %@"
           }
         },
         "zh-Hans": {
@@ -6569,6 +9023,12 @@
             "value": "Close this pack’s dialogs and wait for its actions to finish before updating or uninstalling."
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feche as janelas deste pacote e aguarde as ações dele terminarem antes de atualizar ou desinstalar."
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
@@ -6585,10 +9045,214 @@
             "value": "Retry save"
           }
         },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tentar salvar de novo"
+          }
+        },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "重试保存"
+          }
+        }
+      }
+    },
+    "onboarding.step3.allGranted": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All permissions granted"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas as permissões concedidas"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已授予全部权限"
+          }
+        }
+      }
+    },
+    "onboarding.permission.granted": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Granted"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concedida"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已授予"
+          }
+        }
+      }
+    },
+    "onboarding.permission.denied": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denied"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Negada"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已拒绝"
+          }
+        }
+      }
+    },
+    "onboarding.permission.pending": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not requested"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendente"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未请求"
+          }
+        }
+      }
+    },
+    "onboarding.permission.openSettings": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Ajustes"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开设置"
+          }
+        }
+      }
+    },
+    "onboarding.diag.electionUse": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "enabled by the system"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ativada pelo sistema"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已由系统启用"
+          }
+        }
+      }
+    },
+    "onboarding.diag.electionIgnore": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "disabled"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "desativada"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停用"
+          }
+        }
+      }
+    },
+    "onboarding.diag.electionUnknown": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "unknown state"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "estado desconhecido"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "状态未知"
+          }
+        }
+      }
+    },
+    "onboarding.step4.restartFinderNote": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For the menu to appear, restart the Finder once. Open Finder windows close and reopen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para o menu aparecer, reinicie o Finder uma vez. As janelas abertas do Finder fecham e reabrem."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要让菜单出现，请重新启动一次 Finder。已打开的 Finder 窗口会关闭并重新打开。"
           }
         }
       }
