@@ -2,7 +2,7 @@
 
 **用可编辑脚本和按需弹出的 HTML 界面，定制 Finder 右键菜单。**
 
-[English](README.md) · 简体中文
+[English](README-menumate.md) · 简体中文
 
 MenuMate 是开源的 macOS 菜单栏应用，用于创建文件动作、管理动作出现的条件，以及安装社区扩展包。主 App 负责执行，Finder Sync 扩展负责提供右键菜单。支持 macOS 13+，界面提供中文和英文，采用 MIT 许可。
 
@@ -10,7 +10,7 @@ MenuMate 是开源的 macOS 菜单栏应用，用于创建文件动作、管理�
 
 ## 下载测试版
 
-[下载 v0.3.0-beta.1](https://github.com/Hibrielle/menumate/releases/tag/v0.3.0-beta.1) · [安装说明](docs/INSTALL-TEST.md)
+[下载 v0.3.0-beta.1](https://github.com/Hibrielle/menumate/releases/tag/v0.3.0-beta.1) · [安装说明](INSTALL-TEST.md)
 
 macOS 13+，Universal 包包含 Apple Silicon 和 Intel。测试包使用临时签名，未经 Apple 公证，首次打开可能需要手动允许；自动更新暂未启用。
 
@@ -20,15 +20,15 @@ macOS 13+，Universal 包包含 Apple Silicon 和 Intel。测试包使用临时�
 
 **Finder 中的实际效果**：启用的动作出现在文件右键菜单中，“图片转换”可展开选择输出格式。
 
-![Finder 中的 MenuMate 动作及图片转换子菜单](docs/screenshots/finder-menu-current-zh.png)
+![Finder 中的 MenuMate 动作及图片转换子菜单](screenshots/finder-menu-current-zh.png)
 
 **右键菜单与动作编辑**：左侧预览匹配的动作，右侧修改动作设置。
 
-![MenuMate 右键菜单预览与动作编辑界面](docs/screenshots/settings-current-zh.jpg)
+![MenuMate 右键菜单预览与动作编辑界面](screenshots/settings-current-zh.jpg)
 
 **扩展包管理**：展开包，分别启用动作并查看脚本。
 
-![MenuMate 扩展包及包内动作管理界面](docs/screenshots/packs-current-zh.jpg)
+![MenuMate 扩展包及包内动作管理界面](screenshots/packs-current-zh.jpg)
 
 ## 能做什么
 
@@ -72,9 +72,9 @@ make run         # 构建并启动
 
 ## 开发自己的扩展包
 
-从[扩展包开发指南](docs/extension-development.zh.md)开始：创建普通脚本动作、添加 HTML 表单、接收选中文件、提交参数与显示结果，以及本地调试、更新和发布。
+从[扩展包开发指南](extension-development.zh.md)开始：创建普通脚本动作、添加 HTML 表单、接收选中文件、提交参数与显示结果，以及本地调试、更新和发布。
 
-[可直接复制的入门包](examples/selection-info-pack/)包含一个普通动作和一个 HTML 动作；完整字段查询见[扩展包规范](docs/pack-spec.zh.md)。
+[可直接复制的入门包](examples/selection-info-pack/)包含一个普通动作和一个 HTML 动作；完整字段查询见[扩展包规范](pack-spec.zh.md)。
 
 ## 试用 HTML 示例包
 
@@ -92,7 +92,7 @@ zsh scripts/prepare-image-tools-pack.sh
 
 设置更改保存成功后才会同步给 Finder。保存失败时，继续使用上次保存的配置并显示错误，动作编辑器提供“重试保存”。损坏的配置和安装记录会被保留，不会被静默覆盖。
 
-参见[中文版扩展包规范](docs/pack-spec.zh.md)、[普通脚本示例](examples/example-pack/)和[HTML 示例包](examples/image-tools-pack/)。
+参见[中文版扩展包规范](pack-spec.zh.md)、[普通脚本示例](examples/example-pack/)和[HTML 示例包](examples/image-tools-pack/)。
 
 ## 最近执行
 
@@ -102,7 +102,7 @@ zsh scripts/prepare-image-tools-pack.sh
 
 ## 脚本参数与试运行边界
 
-脚本使用 `/bin/zsh` 执行，选中路径作为位置参数传入。推荐使用 `"$@"`，避免空格和换行文件名被拆开。`MENUMATE_VARIANT` 提供子菜单值，`MENUMATE_INPUT` 提供 HTML 弹窗提交的 JSON 对象，`MENUMATE_LOCALE` 提供 App 语言；还会传入数据目录、模板目录及终端/编辑器偏好，详见[脚本环境契约](docs/pack-spec.zh.md#脚本环境契约)。
+脚本使用 `/bin/zsh` 执行，选中路径作为位置参数传入。推荐使用 `"$@"`，避免空格和换行文件名被拆开。`MENUMATE_VARIANT` 提供子菜单值，`MENUMATE_INPUT` 提供 HTML 弹窗提交的 JSON 对象，`MENUMATE_LOCALE` 提供 App 语言；还会传入数据目录、模板目录及终端/编辑器偏好，详见[脚本环境契约](pack-spec.zh.md#脚本环境契约)。
 
 临时样本位于 `~/Library/Application Support/MenuMate/TestRuns/<UUID>/`，每次创建独立的 Inputs、Data、Templates、Temporary 目录。目前只有标准 Templates 目录子菜单具备生成样本的约定，自定义目录不支持时会明确报错。
 
@@ -118,7 +118,7 @@ zsh scripts/prepare-image-tools-pack.sh
 
 配置快照通过分块的 `DistributedNotificationCenter` 消息传递，不依赖 App Group 配置文件。Finder 扩展本身不执行动作脚本。
 
-[贡献指南](CONTRIBUTING.zh.md) · [英文贡献指南](CONTRIBUTING.md) · [发布流程（英文）](docs/RELEASING.md)
+[贡献指南](CONTRIBUTING.zh.md) · [英文贡献指南](CONTRIBUTING.md) · [发布流程（英文）](RELEASING.md)
 
 CI 执行 Core、预设脚本、隔离包管理和执行历史测试，并编译 App 和扩展。UI 变化还需要原生界面验收，构建通过不能代替端到端验证。
 
