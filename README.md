@@ -17,7 +17,7 @@
 ---
 
 <p align="center">
-  <img src="docs/print.png" width="560" alt="iMenuPeek — ajustes do menu de contexto com Copiar caminho e Subir um nível no submenu iMenuPeek">
+  <img src="docs/print.png" width="560" alt="iMenuPeek — aba Menu do app com a Acessibilidade ativa e o ⌘ + clique direito funcionando">
 </p>
 
 ---
@@ -39,7 +39,7 @@ O iMenuPeek é um app de barra de menus com uma extensão do Finder. Você cria 
   - **Novo arquivo** — no espaço vazio da janela, a partir de modelos
 - **Ações suas** — script zsh inline ou em arquivo, ou "abrir com app"; recebe os itens em `$1…$n` e `MENUMATE_PATHS`
 - **Regras** — arquivos, pastas, espaço vazio, tipo de arquivo, mínimo/máximo de itens
-- **Menu do app no cursor** — **⌘ + clique direito** em qualquer lugar abre o menu do app em primeiro plano junto do ponteiro (estilo Menuwhere); liga/desliga em Ajustes › Geral
+- **Menu do app no cursor** — **⌘ + clique direito** em qualquer lugar abre o menu do app em primeiro plano junto do ponteiro (estilo Menuwhere). Funciona também em apps Java como **IntelliJ, Android Studio e NetBeans**, onde nem o Menuwhere funciona: o iMenuPeek abre o menu real e aciona o item. Configuração na aba **Menu do app** (estado da Acessibilidade, botão de permissão e liga/desliga)
 - **Teste com amostras** e **histórico de execuções** com saída e erro; aviso quando um script falha
 - **Menu de contexto completo** — vê e desliga Serviços e extensões de outros apps que poluem o botão direito
 - **Ícones acompanham o tema** claro/escuro; interface em **português**, inglês e chinês
@@ -60,7 +60,7 @@ xattr -dr com.apple.quarantine /Applications/iMenuPeek.app
 
 - Clique com o botão direito num arquivo, pasta ou espaço vazio → **iMenuPeek ▸**
 - **⌘ + clique direito** em qualquer lugar → menu do app em primeiro plano no cursor
-- Ícone na barra de menus → **Ajustes** para criar e editar ações e ver o menu completo
+- Ícone na barra de menus → **Ajustes**: aba **Menu de contexto** para criar e editar ações e ver o menu completo; aba **Menu do app** para o ⌘ + clique direito
 - **Execuções recentes** mostra o resultado de cada ação
 
 O menu não aparece em `/Applications`, no iCloud Drive nem em pastas gerenciadas por provedores de arquivo (limitação do Finder para extensões).
