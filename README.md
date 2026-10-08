@@ -4,7 +4,7 @@
   <h1>iMenuPeek</h1>
 
   <p><strong>Ações próprias no menu de botão direito do Finder — scripts seus, num submenu só.</strong></p>
-  <p>Crie ações em zsh (inline ou em arquivo), escolha quando cada uma aparece e use direto no menu de contexto do Finder. Vem com Copiar caminho, Ocultar / Reexibir, Subir um nível e Novo arquivo.</p>
+  <p>Crie ações em zsh (inline ou em arquivo), escolha quando cada uma aparece e use direto no menu de contexto do Finder. Vem com Copiar caminho, Ocultar / Reexibir, Subir um nível e Novo arquivo — e abre o menu de qualquer app junto do cursor com ⌘ + clique direito.</p>
 
   <p>
     <img src="https://img.shields.io/badge/macOS-13.0%2B-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS 13+">
@@ -39,8 +39,8 @@ O iMenuPeek é um app de barra de menus com uma extensão do Finder. Você cria 
   - **Novo arquivo** — no espaço vazio da janela, a partir de modelos
 - **Ações suas** — script zsh inline ou em arquivo, ou "abrir com app"; recebe os itens em `$1…$n` e `MENUMATE_PATHS`
 - **Regras** — arquivos, pastas, espaço vazio, tipo de arquivo, mínimo/máximo de itens
+- **Menu do app no cursor** — **⌘ + clique direito** em qualquer lugar abre o menu do app em primeiro plano junto do ponteiro (estilo Menuwhere); liga/desliga em Ajustes › Geral
 - **Teste com amostras** e **histórico de execuções** com saída e erro; aviso quando um script falha
-- **Pacotes de ações** — importados de repositórios git, revisados arquivo por arquivo e desativados até você ligar
 - **Menu de contexto completo** — vê e desliga Serviços e extensões de outros apps que poluem o botão direito
 - **Ícones acompanham o tema** claro/escuro; interface em **português**, inglês e chinês
 
@@ -48,7 +48,7 @@ O iMenuPeek é um app de barra de menus com uma extensão do Finder. Você cria 
 
 1. Baixe o `iMenuPeek.dmg` na [última release](https://github.com/fredwilliamtjr/iMenuPeek/releases/latest)
 2. Arraste o **iMenuPeek.app** para **Aplicativos** e abra
-3. Siga as boas-vindas: ative a **extensão do Finder**, conceda **Notificações** e **Automação › Finder**, e use **Reiniciar o Finder** na última tela
+3. Siga as boas-vindas: ative a **extensão do Finder**, conceda **Notificações**, **Automação › Finder** e **Acessibilidade** (para o menu no cursor), e use **Reiniciar o Finder** na última tela
 
 O app tem assinatura ad-hoc (sem notarização da Apple). Se o macOS bloquear dizendo que está "danificado":
 
@@ -59,7 +59,8 @@ xattr -dr com.apple.quarantine /Applications/iMenuPeek.app
 ## ⚙️ Como usar
 
 - Clique com o botão direito num arquivo, pasta ou espaço vazio → **iMenuPeek ▸**
-- Ícone na barra de menus → **Ajustes** para criar e editar ações, ver o menu completo e os pacotes
+- **⌘ + clique direito** em qualquer lugar → menu do app em primeiro plano no cursor
+- Ícone na barra de menus → **Ajustes** para criar e editar ações e ver o menu completo
 - **Execuções recentes** mostra o resultado de cada ação
 
 O menu não aparece em `/Applications`, no iCloud Drive nem em pastas gerenciadas por provedores de arquivo (limitação do Finder para extensões).
@@ -67,7 +68,8 @@ O menu não aparece em `/Applications`, no iCloud Drive nem em pastas gerenciada
 ## 🔒 Segurança
 
 - Cada clique é **assinado** pela extensão (HMAC-SHA256 com chave por instalação) e o app recusa o que não estiver assinado — outro app não consegue disparar suas ações.
-- Sem permissão de Acessibilidade, sem Acesso Total ao Disco, sem atualização automática, sem telemetria.
+- Pede **Acessibilidade** para o menu no cursor; os scripts das ações, por rodarem pelo app, também passam a ter esse poder — rode só scripts em que você confia.
+- Sem Acesso Total ao Disco, sem importação de pacotes da internet, sem atualização automática, sem telemetria.
 - Detalhes em [SECURITY.md](SECURITY.md).
 
 ## 🔨 Build a partir do código
@@ -84,7 +86,7 @@ Mais em [docs/RELEASING.md](docs/RELEASING.md).
 
 ## 🌱 Origem
 
-Fork do [MenuMate](https://github.com/Hibrielle/menumate), de Hibrielle (MIT), com o histórico preservado. Antes do fork, o código passou por revisão de segurança. Mudanças do iMenuPeek: nome e identidade próprios, cliques autenticados, sem Cut/Paste, sem Acessibilidade, sem Sparkle, tudo no submenu do app, ícones conforme o tema, ação Ocultar / Reexibir e interface em português. Por compatibilidade com pacotes do MenuMate, ficam o módulo `MenuMateCore`, as variáveis `MENUMATE_*`, a ponte `window.menumate` e o tópico `menumate-pack`. Documentação original em [docs/README-menumate.md](docs/README-menumate.md).
+Fork do [MenuMate](https://github.com/Hibrielle/menumate), de Hibrielle (MIT), com o histórico preservado. Antes do fork, o código passou por revisão de segurança. Mudanças do iMenuPeek: nome e identidade próprios, cliques autenticados, sem Cut/Paste, sem Sparkle, sem importação de pacotes, tudo no submenu do app, ícones conforme o tema, ação Ocultar / Reexibir, menu do app no cursor (leitura de menus adaptada do [menuanywhere](https://github.com/acsandmann/menuanywhere), MIT — ver [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)) e interface em português. Por compatibilidade com pacotes do MenuMate, ficam o módulo `MenuMateCore`, as variáveis `MENUMATE_*`, a ponte `window.menumate` e o tópico `menumate-pack`. Documentação original em [docs/README-menumate.md](docs/README-menumate.md).
 
 ## 👨‍👩‍👧 Família Peek
 

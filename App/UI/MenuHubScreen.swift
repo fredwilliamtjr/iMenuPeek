@@ -38,7 +38,6 @@ struct ScreenMenuHub: View {
     @State private var caps = CapabilityProbe.cachedOrUnknown()
 
     @State private var filter: Int = 0          // 0 全部 / 1 仅 MenuMate / 2 其他来源
-    @State private var previewInput = MenuPreviewInput()
     @State private var selection: HubSelection?
     @State private var showDeclutter = false
     @State private var searchText = ""
@@ -113,7 +112,6 @@ struct ScreenMenuHub: View {
                 .padding(7)
                 .background(MMColor.field, in: RoundedRectangle(cornerRadius: 6))
                 Segmented([String(localized: "menu.filterAll"), String(localized: "menu.filterMenuMateOnly"), String(localized: "menu.filterOtherSources")], selection: $filter)
-                MenuPreviewControls(input: $previewInput)
             }
             .padding(.horizontal, 14)
             .padding(.top, 12)
@@ -142,7 +140,6 @@ struct ScreenMenuHub: View {
                             if saveAction(action) { selection = .ownAction(action.id) }
                         } catch { state.configError = error.localizedDescription }
                     }
-                    Button(String(localized: "menu.browsePacks")) { state.settingsTab = .packs }
                     Button(String(localized: "declutter.button")) { showDeclutter = true }
                 }
             }
@@ -253,13 +250,6 @@ struct ScreenMenuHub: View {
             }
             .padding(.leading, 22)
             .padding(.trailing, 6)
-        }
-        if case .ownAction(let id) = selection,
-           let action = sortedActions.first(where: { $0.id == id }),
-           matchResult(for: action) != .matched {
-            sep
-            SectionCap(String(localized: "menu.previewSelectedHidden"))
-            actionRow(action, sub: false)
         }
     }
 
@@ -413,11 +403,7 @@ struct ScreenMenuHub: View {
         switch selection {
         case .ownAction(let id):
             if let action = state.config.actions.first(where: { $0.id == id }) {
-                if let message = matchResult(for: action).previewMessage {
-                    Banner(message, tone: .orange)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 12)
-                } else if !action.isEnabled {
+                if !action.isEnabled {
                     Banner(String(localized: "menu.previewDisabled"), tone: .orange)
                         .padding(.horizontal, 20)
                         .padding(.top, 12)
@@ -496,11 +482,10 @@ struct ScreenMenuHub: View {
 
     // MARK: 行为
 
+    /// iMenuPeek: sem o simulador de alvo do botão direito — a lista mostra todas as ações (só a busca filtra).
     private var matchingActions: [MenuAction] {
-        let context = previewInput.resolved
-        return sortedActions.filter {
-            searchMatches($0.title, $0.displayTitle, $0.localizedTitles?.values.joined(separator: " ") ?? "", $0.packRepo ?? "", $0.presetKey ?? "") &&
-            RuleMatcher.evaluate(rule: $0.matching, context: context) == .matched
+        sortedActions.filter {
+            searchMatches($0.title, $0.displayTitle, $0.localizedTitles?.values.joined(separator: " ") ?? "", $0.packRepo ?? "", $0.presetKey ?? "")
         }
     }
 
@@ -515,10 +500,6 @@ struct ScreenMenuHub: View {
 
     private var filteredExtensions: [ManagedExtension] {
         extensionManager.extensions.filter { searchMatches($0.displayName, $0.id) }
-    }
-
-    private func matchResult(for action: MenuAction) -> MatchResult {
-        RuleMatcher.evaluate(rule: action.matching, context: previewInput.resolved)
     }
 
     private func hue(for action: MenuAction) -> AppIconHue {

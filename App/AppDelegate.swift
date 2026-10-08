@@ -19,6 +19,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         ProcessInfo.processInfo.disableAutomaticTermination("iMenuPeek vive na barra de menus")
         Notifier.requestAuthorizationOnce()
         Task { @MainActor in AppState.shared.start() }
+        AppMenuAtCursor.shared.refresh()   // ⌘ + clique direito: menu do app no cursor (espera a Acessibilidade)
 
         let onboardingDone = UserDefaults.standard.bool(forKey: "onboardingDone")
         let enabled = Self.extensionEnabled()

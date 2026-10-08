@@ -14,7 +14,7 @@ settings:
     # 版本默认值;发布时 scripts/release.sh 用 tag 覆盖 MARKETING_VERSION + 单调的 CURRENT_PROJECT_VERSION,
     # 经下方 Info.plist 的 $(MARKETING_VERSION)/$(CURRENT_PROJECT_VERSION) 注入。
     # iMenuPeek 不带自动更新(Sparkle 已移除):新版本只经 GitHub Releases 发布。
-    MARKETING_VERSION: "0.1.0"
+    MARKETING_VERSION: "0.2.0"
     CURRENT_PROJECT_VERSION: "1"
     # 签名由 Local.xcconfig 控制（默认 ad-hoc；正式分发用 Developer ID）
 targets:

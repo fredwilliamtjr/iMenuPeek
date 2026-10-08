@@ -16,7 +16,7 @@ final class AppState: ObservableObject {
     }
     @Published private(set) var config: MenuConfig = MenuConfig(schemaVersion: MenuConfig.currentSchemaVersion, actions: [])
     @Published var configError: String?
-    /// 设置窗当前 Tab(SettingsWindow 绑定;Hub 可设为 .packs 直接跳到扩展包)
+    /// 设置窗当前 Tab(SettingsWindow 绑定)
     @Published var settingsTab: SettingsTab = .contextMenu
     /// 扩展包数据层：包动作已并入 config，随快照推送；此处只负责导入/审查/启停/更新/卸载。
     lazy var packManager = PackManager(appState: { [unowned self] in self })

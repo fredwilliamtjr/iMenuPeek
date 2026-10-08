@@ -12,6 +12,7 @@ struct OnboardingView: View {
     @State private var extensionEnabled = FIFinderSyncController.isExtensionEnabled
     @State private var notificationState: Permissions.State?
     @State private var automationState: Permissions.State?
+    @State private var accessibilityState: Permissions.State?
     @State private var refreshing = false
     @State private var loginItemEnabled = SMAppService.mainApp.status == .enabled
     @State private var diagnosis = ""   // calculado ao entrar na tela ④ (e a cada 2 s nela)
@@ -80,6 +81,7 @@ struct OnboardingView: View {
     /// (ver AppDelegate.extensionEnabled) → mesma verificação com pluginkit, fora da main.
     private func refreshStatus() {
         Permissions.notificationState { notificationState = $0 }
+        accessibilityState = Permissions.accessibilityState
         guard !refreshing else { return }
         refreshing = true
         let onDiagnosis = step == stepCount - 1
@@ -97,7 +99,7 @@ struct OnboardingView: View {
     }
 
     private var allPermissionsGranted: Bool {
-        notificationState == .granted && automationState == .granted
+        notificationState == .granted && automationState == .granted && accessibilityState == .granted
     }
 
     // MARK: - 步进文案
@@ -206,6 +208,10 @@ struct OnboardingView: View {
             permissionRow(icon: "gearshape.2", hue: .blue, title: String(localized: "onboarding.step3.automation.title"),
                           desc: String(localized: "onboarding.step3.automation.desc"),
                           state: automationState, openSettings: Permissions.openAutomationSettings)
+            permissionRow(icon: "accessibility", hue: .green, title: String(localized: "onboarding.step3.accessibility.title"),
+                          desc: String(localized: "onboarding.step3.accessibility.desc"),
+                          state: accessibilityState, openSettings: Permissions.openAccessibilitySettings,
+                          settingsWhenPending: true)
         }
         VStack(spacing: 8) {
             MMButton(String(localized: allPermissionsGranted ? "onboarding.step3.allGranted" : "onboarding.step3.grantAll"),
@@ -223,7 +229,8 @@ struct OnboardingView: View {
     @ViewBuilder
     private func permissionRow(icon: String, hue: AppIconHue, title: String,
                                desc: String, state: Permissions.State?,
-                               openSettings: @escaping () -> Void) -> some View {
+                               openSettings: @escaping () -> Void,
+                               settingsWhenPending: Bool = false) -> some View {
         HStack(spacing: 12) {
             AppIcon(icon, size: 30, hue: hue)
             VStack(alignment: .leading, spacing: 1) {
@@ -232,7 +239,7 @@ struct OnboardingView: View {
             }
             Spacer(minLength: 0)
             if let state {
-                permissionStatus(state, openSettings: openSettings)
+                permissionStatus(state, openSettings: openSettings, settingsWhenPending: settingsWhenPending)
             }
         }
         .padding(.horizontal, 16)
@@ -245,7 +252,8 @@ struct OnboardingView: View {
     }
 
     @ViewBuilder
-    private func permissionStatus(_ state: Permissions.State, openSettings: @escaping () -> Void) -> some View {
+    private func permissionStatus(_ state: Permissions.State, openSettings: @escaping () -> Void,
+                                  settingsWhenPending: Bool) -> some View {
         switch state {
         case .granted:
             HStack(spacing: 5) {
@@ -263,11 +271,17 @@ struct OnboardingView: View {
                 MMButton(String(localized: "onboarding.permission.openSettings"), kind: .plain, size: .sm, action: openSettings)
             }
         case .notDetermined:
-            HStack(spacing: 5) {
-                Image(systemName: "circle.dashed").font(.system(size: 15))
-                Text(String(localized: "onboarding.permission.pending")).font(.system(size: 11.5))
+            VStack(alignment: .trailing, spacing: 3) {
+                HStack(spacing: 5) {
+                    Image(systemName: "circle.dashed").font(.system(size: 15))
+                    Text(String(localized: "onboarding.permission.pending")).font(.system(size: 11.5))
+                }
+                .foregroundStyle(MMColor.label3)
+                // Acessibilidade só é ligada à mão nos Ajustes do Sistema (o aviso aparece uma vez).
+                if settingsWhenPending {
+                    MMButton(String(localized: "onboarding.permission.openSettings"), kind: .plain, size: .sm, action: openSettings)
+                }
             }
-            .foregroundStyle(MMColor.label3)
         }
     }
 

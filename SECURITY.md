@@ -22,11 +22,11 @@ O iMenuPeek é um app **sem sandbox** com uma extensão Finder Sync **com sandbo
 
 - **Sem presets que movem arquivos.** Os presets Cut/Paste do MenuMate foram removidos: eram ações ativadas por padrão que moviam arquivos e podiam ser disparadas sem clique do usuário.
 
-- **Sem Acessibilidade.** O iMenuPeek não pede a permissão de Acessibilidade: scripts são processos filhos do app e herdariam o poder de sintetizar teclas e controlar outros apps. Ele pede apenas Notificações (avisar falhas) e Automação › Finder (navegar na janela do Finder). Não exige Acesso Total ao Disco.
+- **Acessibilidade (desde a 0.2.0).** O iMenuPeek pede Acessibilidade para o menu do app no cursor (ler o menu de outros apps e interceptar o ⌘ + clique direito). Scripts são processos filhos do app e **herdam** esse poder (sintetizar teclas, clicar e ler a interface de outros apps) — decisão consciente: rode só scripts em que você confia. Pede também Notificações (avisar falhas) e Automação › Finder (navegar na janela do Finder). Não exige Acesso Total ao Disco.
 
 - **Sem atualização automática.** O Sparkle foi removido; o app não consulta nenhum feed de atualização. Versões novas saem só pelas Releases do GitHub.
 
-- **Pacotes de extensão são somente leitura na importação e vêm desativados.** A importação é um `git clone --depth 1 -- <url>` que **não executa nada** (o `--` impede que a URL digitada vire opção do git). A revisão mostra cada script declarado no manifesto **e todo outro arquivo do repositório** (scripts ocultos, executáveis e binários são sinalizados), porque um script declarado pode fazer `source` de arquivos vizinhos. As ações importadas entram **desativadas** até você ativá-las uma a uma.
+- **Sem importação de pacotes.** A aba Pacotes (busca no GitHub, `git clone` e revisão) foi removida da interface na 0.2.0; o app não baixa ações da internet.
 
 - **"Remover quarentena" ignora o Gatekeeper de propósito.** Se você criar uma ação que remove `com.apple.quarantine`, use só em arquivos em que confia.
 
